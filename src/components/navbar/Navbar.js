@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import NavbarLinks from "./NavbarLinks"
 import styled from "styled-components"
-// import Logo from "./Logo"
 
 const Navigation = styled.nav`
   display: flex;

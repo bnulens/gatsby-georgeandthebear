@@ -7,7 +7,6 @@ import Flex from "./Flex"
 const Wrapper = styled.header`
   max-width: 1080px;
   margin: 0 auto;
-  margin-bottom: 20px;
 `
 
 const StyledDiv = styled(Flex)`

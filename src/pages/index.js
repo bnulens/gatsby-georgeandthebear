@@ -7,7 +7,6 @@ import styled from "styled-components"
 import FrontImage from "gatsby-background-image"
 
 import Flex from "../components/Flex"
-import "../css/global.css"
 
 const HeroImage = styled(FrontImage)`
   align-self: center;

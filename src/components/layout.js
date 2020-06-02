@@ -12,8 +12,7 @@ import styled from "styled-components"
 
 import Header from "./header"
 import Footer from "./Footer"
-import "./layout.css"
-import "../css/global.css"
+import "../scss/global.scss"
 
 const Wrapper = styled.div`
   max-width: 1080px;
