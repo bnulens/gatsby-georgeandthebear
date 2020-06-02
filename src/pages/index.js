@@ -15,26 +15,26 @@ const HeroImage = styled(FrontImage)`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-`;
+`
 
-const Overlay = styled.div` 
+const Overlay = styled.div`
   height: 100%;
-  background-color: rgba(0, 0, 0, .1);
-`;
+  background-color: rgba(0, 0, 0, 0.1);
+`
 
-const ContentBox = styled(Flex)` 
+const ContentBox = styled(Flex)`
   height: 100%;
   max-width: 1080px;
   margin: 0 auto;
-`;
+`
 
-const HeroTitle = styled.h1` 
+const HeroTitle = styled.h1`
   font-size: 118px;
   font-family: serif;
   color: white;
   text-align: right;
   margin: auto 0;
-`;
+`
 
 const SubHero = styled.h3`
   font-size: 28px;
@@ -47,21 +47,34 @@ const SubHero = styled.h3`
   margin: auto 0;
 `
 
-const Content = styled.div` 
+const Content = styled.div`
   max-width: 1080px;
   margin: 0 auto;
   border: 1px solid black;
   padding: 48px 0;
-`;
+`
 
-const IndexPage = (props) => (
+const IndexPage = props => (
   <Layout hasHero>
-    <SEO title="George and the Bear" keywords={[`vinyl`, `records`, `coffee`, `music`]} />
+    <SEO
+      title="George and the Bear"
+      keywords={[`vinyl`, `records`, `coffee`, `music`]}
+    />
     <HeroImage fluid={props.data.heroImage.childImageSharp.fluid}>
       <Overlay>
-        <ContentBox flexDirection="column" justifyContent="flex-end" alignItems="right">
-          <HeroTitle>George and<br />the Bear</HeroTitle>
-          <SubHero> – "Record collecting is an infinite journey backwards" –</SubHero>
+        <ContentBox
+          flexDirection="column"
+          justifyContent="flex-end"
+          alignItems="right"
+        >
+          <HeroTitle>
+            George and
+            <br />
+            the Bear
+          </HeroTitle>
+          <SubHero>
+            – "Record collecting is an infinite journey backwards" –
+          </SubHero>
         </ContentBox>
       </Overlay>
     </HeroImage>
@@ -71,14 +84,16 @@ const IndexPage = (props) => (
   </Layout>
 )
 
-export const pageQuery = graphql` query {
-  heroImage: file(relativePath: { eq: "hero-background2.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 1080 quality: 100) {
-        ...GatsbyImageSharpFluid
+export const pageQuery = graphql`
+  query {
+    heroImage: file(relativePath: { eq: "images/hero-background2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1080, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }
-}`
+`
 
 export default IndexPage
