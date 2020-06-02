@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 const LogoWrap = styled.div`
-  margin: auto 0;
+  ${'' /* margin: auto 0; */}
   flex: 0 1 38px;
 
   @media (max-width: 768px) and (orientation: landscape) {
@@ -17,8 +17,12 @@ const Logo = () => {
     query {
       file(name: { eq: "georgeandthebear-white" }, extension: { eq: "png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, pngQuality: 80) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 500, pngQuality: 100) {
+            base64
+            aspectRatio
+            src
+            srcSet
+            sizes
           }
         }
       }
