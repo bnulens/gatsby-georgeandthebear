@@ -110,23 +110,20 @@ const Footer = () => {
                     >
                         <Email width="32" height="32" />
                     </SocialLink>
-                    {/* {socialLinks.map(link => {
-                        return (<SocialLink key={link.name}>
-                            <a href={link.url}><img src={link.icon} alt={link.name} /></a>
-                        </SocialLink>)
-                    })} */}
-                </SocialBar>
-                <StyledFlex justifyContent="space-between" alignItems="center">
                     <Logo />
+                </SocialBar>
+                <StyledFlex justifyContent="space-between" alignItems="flex-start">
                     <Locations>
                         <h2>Locatie</h2>
-                        <adress
+                        <address
                             href="https://www.google.be/maps/place/George+and+the+Bear/@50.9726884,5.48735,20.06z/data=!4m5!3m4!1s0x47c0d8d161110867:0x54fe41c342e3bc12!8m2!3d50.9726508!4d5.487577"
                             target="_blank"
                             rel="noopener noreferrer"
-                        ></adress>
-                        <address>Vennestraat 353</address>
-                        <adress>3600 Genk</adress>
+                        >Vennestraat 35</address>
+                        <address>3600 Genk</address>
+                        <address>België</address>
+                        <a href="tel:+3289214001">+32 (0)89 21 40 01</a><br />
+                        <a href="mailto:info@georgeandthebear.com">info@georgeandthebear.com</a>
                     </Locations>
                     <OpeningHours>
                         <h2>Openingsuren</h2>
