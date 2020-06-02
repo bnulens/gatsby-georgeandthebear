@@ -1,8 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import Flex from "./Flex"
 import Logo from "./Logo"
+
+import Facebook from "../icons/svg/facebook.svg"
+import Instagram from "../icons/svg/instagram.svg"
+import Twitter from "../icons/svg/twitter.svg"
+import Email from "../icons/svg/mail.svg"
 
 const Wrapper = styled.footer`
     width: 150%;
@@ -22,15 +26,25 @@ const InnerWrapper = styled.div`
     padding: 60px 0;
 `;
 
-const SocialLinks = styled.ul`
+const SocialBar = styled.nav`
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 24px 0;
 `;
 
-const SocialLink = styled.li`
-    margin-right: 8px;
+const SocialLink = styled.a`
+    filter: invert(0.5);
+    margin-right: 32px;
+
+    :hover {
+        filter: invert(0.8);
+        transition: all ease 0.6s;
+    }
+
+    :focus {
+        filter: invert(0.8);
+    }
 `;
 
 const StyledFlex = styled(Flex)`
@@ -40,46 +54,68 @@ const StyledFlex = styled(Flex)`
 `;
 
 const Locations = styled.section`
-    
-`
+    font-family: "Courier New", Courier, monospace;
+    min-width: 220px;
+    text-align: left;
+`;
 
 const OpeningHours = styled.section`
+    font-family: "Courier New", Courier, monospace;
     min-width: 220px;
     text-align: right;
-`
+`;
 
 const ListItem = styled.li`
     margin-bottom: 8px;
 `;
 
+
 const Footer = () => {
-    const socialLinks = [
-        { name: 'facebook', url: 'https://www.facebook.com/georgeandthebear/', icon: './images/facebook.svg' },
-        { name: 'instagram', url: 'https://www.instagram.com/georgeandthebear/', icon: './images/instagram.svg' },
-        { name: 'twitter', url: 'https://twitter.com/george_and_bear', icon: './images/twitter.svg' },
-        { name: 'email', url: 'mailto:info@georgeandthebear.com', icon: './images/email.svg' },
-    ]
 
     const openingDays = [
         { name: 'Maandag', open: '13:00', close: '18:00' },
         { name: 'Dinsdag' },
-        { name: 'Woensdag', open: '08:00', close: '18:00' },
-        { name: 'Donderdag', open: '08:00', close: '18:00' },
-        { name: 'Vrijdag', open: '08:00', close: '18:00' },
-        { name: 'Zaterdag', open: '08:00', close: '18:00' },
+        { name: 'Woensdag', open: '10:00', close: '18:00' },
+        { name: 'Donderdag', open: '10:00', close: '18:00' },
+        { name: 'Vrijdag', open: '10:00', close: '22:00' },
+        { name: 'Zaterdag', open: '10:00', close: '18:00' },
         { name: 'Zondag' }
     ]
 
     return (
         <Wrapper>
             <InnerWrapper>
-                <SocialLinks>
-                    {socialLinks.map(link => {
+                <SocialBar>
+                    <SocialLink
+                        href="https://www.facebook.com/georgeandthebear/"
+                        target="__blank"
+                    >
+                        <Facebook width="32" height="32" />
+                    </SocialLink>
+                    <SocialLink
+                        href="https://www.instagram.com/georgeandthebear/"
+                        target="__blank"
+                    >
+                        <Instagram width="26" height="26" />
+                    </SocialLink>
+                    <SocialLink
+                        href="https://twitter.com/george_and_bear"
+                        target="__blank"
+                    >
+                        <Twitter width="32" height="32" />
+                    </SocialLink>
+                    <SocialLink
+                        href="mailto:info@georgeandthebear.com"
+                        target="__blank"
+                    >
+                        <Email width="32" height="32" />
+                    </SocialLink>
+                    {/* {socialLinks.map(link => {
                         return (<SocialLink key={link.name}>
-                            <Link to={link.url}>Link</Link>
+                            <a href={link.url}><img src={link.icon} alt={link.name} /></a>
                         </SocialLink>)
-                    })}
-                </SocialLinks>
+                    })} */}
+                </SocialBar>
                 <StyledFlex justifyContent="space-between" alignItems="center">
                     <Logo />
                     <Locations>
@@ -100,8 +136,8 @@ const Footer = () => {
                                     return (
                                         <ListItem key={day.name}>
                                             <Flex justifyContent="space-between" alignItems="center">
-                                                <span>{day.name}</span>
-                                                <span><time>{day.open}</time> - <time>{day.close}</time></span>
+                                                <span>{day.name}</span><span>____</span>
+                                                <span><time>{day.open}</time>__<time>{day.close}</time></span>
                                             </Flex>
                                         </ListItem>
                                     )
@@ -110,7 +146,7 @@ const Footer = () => {
                                     <ListItem key={day.name}>
                                         <Flex justifyContent="space-between" alignItems="center">
                                             <span>{day.name}</span>
-                                            <span>gesloten</span>
+                                            <span>Gesloten</span>
                                         </Flex>
                                     </ListItem>
                                 )
