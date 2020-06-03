@@ -1,3 +1,4 @@
+require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `George and the Bear`,
@@ -20,6 +21,17 @@ module.exports = {
           include: /icons/, // See below to configure properly
         },
       },
+    },
+    {
+      resolve:`gatsby-source-cloudinary`,
+      options: {
+      cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+      apiKey: process.env.CLOUDINARY_API_KEY,
+      apiSecret: process.env.CLOUDINARY_API_SECRET,
+      resourceType: `image`,
+      type: `type Value`,
+      prefix: `g&b-stock/`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
