@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+
 const RecordPage = ({ data }) => {
   const { title, price, artist } = data.markdownRemark.frontmatter
 
