@@ -4,7 +4,7 @@ genre: 'Psychedelic'
 artist: 'Jimi Hendrix'
 price: 23.95
 label: 'C'
-image: 'jimi-hendrix-made-love'
+image: 'record-images/jimi-hendrix-made-love.jpg'
 band-origin: 'USA'
 country-code: 'US'
 type: 'record'

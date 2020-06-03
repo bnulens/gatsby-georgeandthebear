@@ -4,7 +4,7 @@ genre: 'Progressive rock'
 artist: 'Pink Floyd'
 price: 14.99
 label: 'A'
-image: 'pink-floyd-darkside'
+image: 'record-images/pink-floyd-darkside.jpg'
 band-origin: 'UK'
 country-code: 'UK'
 type: 'record'

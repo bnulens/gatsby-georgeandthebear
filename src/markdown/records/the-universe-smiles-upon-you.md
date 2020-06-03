@@ -4,7 +4,7 @@ genre: 'Funk'
 artist: 'Khruangbin'
 price: 24.99
 label: 'B'
-image: 'khruangbin-universe'
+image: 'record-images/khruangbin-universe.jpg'
 band-origin: 'USA'
 country-code: 'US'
 type: 'record'

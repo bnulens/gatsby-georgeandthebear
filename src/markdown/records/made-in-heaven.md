@@ -4,7 +4,7 @@ genre: 'Disco'
 artist: 'Queen'
 price: 23.50
 label: 'F'
-image: 'queen-made-in-heaven'
+image: 'record-images/queen-made-in-heaven.jpg'
 band-origin: 'UK'
 country-code: 'UK'
 type: 'record'
