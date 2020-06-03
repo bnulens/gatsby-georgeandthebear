@@ -1,6 +1,9 @@
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
+// ALLOWED MEDIA TYPE 
+const ALLOW_MEDIA_TYPE = ['image/jpg', 'image/jpeg']
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === "MarkdownRemark") {
