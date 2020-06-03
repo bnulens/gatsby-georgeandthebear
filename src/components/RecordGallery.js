@@ -15,21 +15,19 @@ const RecordGallery = () => {
                 src
                 srcSet
               }
-              children {
-                id
-              }
             }
           }
         }
       }`
     )
     const clImages = data.allCloudinaryAsset.edges
+    console.log(clImages);
     return (
         <div>
           <div className="image-grid">
             {clImages.map((image, index) => (
                   <div className="image-item" key={`${index}-cl`}>
-                    <img src={image.node} alt={"no alt :("} width="30" height="30"/>
+                    <img src={image.node.fluid.src} alt={"no alt :("} width="30" height="30"/>
                   </div>
                 ))
             }
