@@ -21,7 +21,6 @@ const RecordGallery = () => {
       }`
     )
     const clImages = data.allCloudinaryAsset.edges
-    console.log(clImages);
     return (
         <div>
           <div className="image-grid">
