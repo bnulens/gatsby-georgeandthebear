@@ -51,10 +51,21 @@ const SubHero = styled.h3`
 const Content = styled.div`
   max-width: 1080px;
   margin: 0 auto;
-  border: 1px solid black;
   padding: 86px 0;
 `
+const SalesCatch = styled.div`
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+  h2 {  
+    font-size: 48px;
+  }
 
+  span {
+    font-size: 24px;
+    font-weight: 200;
+  }
+`
 const SalesWrapper = styled(Flex)`
   @media (max-width: 768px) {
     display: flex;
@@ -62,19 +73,16 @@ const SalesWrapper = styled(Flex)`
   }
 `
 const SalesSection = styled.section`
-  font-family: 'Roboto';
   font-weight: 300;
   font-size: 18px;
   width: 100%;
   height: auto;
   padding: 24px;
-  ${'' /* border: 2px solid cyan; */}
   margin-bottom: 24px;
 `
 const SalesTitle = styled(Link)`
   display: block;
   width: 100%;
-  font-family: 'Roboto';
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -109,6 +117,10 @@ const IndexPage = props => (
       </Overlay>
     </HeroImage>
     <Content>
+      <SalesCatch>
+        <h2>In vinyl we trust</h2>
+        <span>You want it, we got it</span>
+      </SalesCatch>
       <SalesWrapper>
         <SalesSection>
           <SalesTitle to="/shop">We have the right record for everyone...</SalesTitle>
