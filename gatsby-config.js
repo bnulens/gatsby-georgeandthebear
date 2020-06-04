@@ -2,8 +2,8 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `George and the Bear`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Home of George and the Bear`,
+    author: `Brecht Nulens`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,7 +23,16 @@ module.exports = {
       },
     },
     {
-      resolve:`gatsby-source-cloudinary`,
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `roboto\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
+    {
+      resolve: `gatsby-source-cloudinary`,
       options: {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiKey: process.env.CLOUDINARY_API_KEY,
@@ -44,6 +53,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -55,8 +65,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/georgeandthebear-white.png`, // This path is relative to the root of the site.
       },
-    },
-    `gatsby-plugin-styled-components`
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
