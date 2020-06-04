@@ -1,6 +1,10 @@
 @import "./reset";
 @import "./layout";
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 p {
     margin: 0;
 }
@@ -13,7 +17,6 @@ ol {
 }
 
 a {
-    color: white;
     text-decoration: none;
 }
 
