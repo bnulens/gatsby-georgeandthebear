@@ -9,15 +9,13 @@ import Twitter from "../icons/svg/twitter.svg"
 import Email from "../icons/svg/mail.svg"
 
 const Wrapper = styled.footer`
-    width: 150%;
-    height: 150%;
-    border-radius: 100% 100% 0 0;
-    top: 50%;
-    left: -25%;
-    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15% 15% 0 0;
     position: relative;
     color: white;
     background-color: rgb(38,33,30);
+    overflow: hidden;
 `;
 
 const InnerWrapper = styled.div` 
@@ -57,6 +55,9 @@ const Locations = styled.section`
     font-family: "Courier New", Courier, monospace;
     min-width: 220px;
     text-align: left;
+    a {
+        color: white;
+    }
 `;
 
 const OpeningHours = styled.section`
