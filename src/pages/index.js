@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Link } from "gatsby"
 
 import { graphql } from "gatsby"
 import styled from "styled-components"
@@ -51,9 +52,38 @@ const Content = styled.div`
   max-width: 1080px;
   margin: 0 auto;
   border: 1px solid black;
-  padding: 48px 0;
+  padding: 86px 0;
 `
 
+const SalesWrapper = styled(Flex)`
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+`
+const SalesSection = styled.section`
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 18px;
+  width: 100%;
+  height: auto;
+  padding: 24px;
+  ${'' /* border: 2px solid cyan; */}
+  margin-bottom: 24px;
+`
+const SalesTitle = styled(Link)`
+  display: block;
+  width: 100%;
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #051313;
+`
+const SalesParagraph = styled.p`
+  text-align: justify;
+  line-height: 22px;
+`
 const IndexPage = props => (
   <Layout hasHero>
     <SEO
@@ -79,7 +109,21 @@ const IndexPage = props => (
       </Overlay>
     </HeroImage>
     <Content>
-      <p></p>
+      <SalesWrapper>
+        <SalesSection>
+          <SalesTitle to="/shop">We have the right record for everyone...</SalesTitle>
+          <SalesParagraph>
+            George and the Bear biedt muziekliefhebbers een ruim aanbod aan vinyl, met genres variërend van rock, pop, punk, jazz, blues, hardcore, indie, new wave en metal tot house, techno, dance of hiphop. Een groot deel van de collectie bestaat uit tweedehandsplaten in goede staat - maar ook de nieuwste releases kan je in onze rekken terugvinden.
+          </SalesParagraph>
+        </SalesSection>
+        <SalesSection>
+          <SalesTitle to="/about">...we also love to buy yours!</SalesTitle>
+          <br />
+          <SalesParagraph>
+            Heb je thuis nog een oude platencollectie staan waar je vanaf wil? Wij nemen hem graag van je over! Indien je nog vinyl hebt om door te verkopen, mag je gerust even binnenspringen in de winkel of contact met ons opnemen, zodat we kunnen bekijken welke samenwerking mogelijk is.
+          </SalesParagraph>
+        </SalesSection>
+      </SalesWrapper>
     </Content>
   </Layout>
 )
