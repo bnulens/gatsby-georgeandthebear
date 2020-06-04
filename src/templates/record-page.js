@@ -1,23 +1,24 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { Image } from "cloudinary-react"
 
-const RecordPage = ({ data: record }) => {
-  const { title, price, artist, image } = record.markdownRemark.frontmatter
+const RecordPage = ({ data }) => {
+  const { title, price, artist, image } = data.markdownRemark.frontmatter
 
   return (
     <>
-      <div>{title}</div>
-      <div>{price}</div>
-      <div>{artist}</div>
+      <Link to="/shop">&lt; Ga terug</Link>
       <Image
         cloudName="bnulens"
         publicId={image}
         width="300"
         height="300"
-      //   fetchFormat="auto"
-      // // secure="true"
+        fetchFormat="auto"
+        secure="true"
       />
+      <div>{title}</div>
+      <div>{price}</div>
+      <div>{artist}</div>
     </>
   )
 }
