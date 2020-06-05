@@ -13,7 +13,6 @@ const RecordPage = ({ data }) => {
         publicId={image}
         width="300"
         height="300"
-        fetchFormat="auto"
         secure="true"
       />
       <div>{title}</div>
