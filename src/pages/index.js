@@ -53,14 +53,34 @@ const Content = styled.div`
   margin: 0 auto;
   padding: 86px 0;
 `
+const Catch = styled.section`
+  max-width: 100%;
+  margin-bottom: 24px;
+`
+const CatchParagraph = styled.section`
+  h2 {
+    margin: 0 auto; 
+    align-self: center;
+    width: 50%;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  p {
+    margin: 0 auto; 
+    align-self: center;
+    width: 50%;
+    font-weight: 200;
+  }
+`
+
 const SalesCatch = styled.div`
   padding: 24px;
   text-align: center;
   margin-bottom: 24px;
-  h2 {  
+  h3 {  
     font-size: 48px;
   }
-
   span {
     font-size: 24px;
     font-weight: 200;
@@ -90,7 +110,6 @@ const SalesTitle = styled(Link)`
 `
 const SalesParagraph = styled.p`
   text-align: justify;
-  line-height: 22px;
 `
 const IndexPage = props => (
   <Layout hasHero>
@@ -117,8 +136,14 @@ const IndexPage = props => (
       </Overlay>
     </HeroImage>
     <Content>
+      <Catch>
+        <CatchParagraph>
+          <h2>YES SIR, WE HAVE BLACK GOLD!</h2>
+          <p>George and the Bear is een platenwinkel waar de muziekliefhebber zich thuis voelt, waar men in een unieke sfeer kan luisteren naar muziek, de krant kan lezen of zich kan verdiepen in muziekliteratuur. Naast de nieuwste releases, die op de voet gevolgd worden, beschikken we ook over een ruim assortiment van tweedehandsplaten en de must-have klassiekers in zowat alle genres.</p>
+        </CatchParagraph>
+      </Catch>
       <SalesCatch>
-        <h2>In vinyl we trust</h2>
+        <h3>In vinyl we trust</h3>
         <span>You want it, we got it</span>
       </SalesCatch>
       <SalesWrapper>
