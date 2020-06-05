@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Flex from "./Flex"
-import Logo from "./Logo"
 
 import Facebook from "../icons/svg/facebook.svg"
 import Instagram from "../icons/svg/instagram.svg"
@@ -111,7 +110,6 @@ const Footer = () => {
                     >
                         <Email width="32" height="32" />
                     </SocialLink>
-                    <Logo />
                 </SocialBar>
                 <StyledFlex justifyContent="space-between" alignItems="flex-start">
                     <Locations>
