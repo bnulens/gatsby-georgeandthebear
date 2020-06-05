@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import FrontImage from "gatsby-background-image"
+import Img from "gatsby-image"
 
 import Flex from "../components/Flex"
 
@@ -71,7 +72,12 @@ const CatchParagraph = styled.section`
     align-self: center;
     width: 50%;
     font-weight: 200;
+    text-align: justify;
   }
+`
+const CatchImage = styled(Img)`
+  width: 900px;
+  margin: 0 auto;
 `
 
 const SalesCatch = styled.div`
@@ -111,13 +117,14 @@ const SalesTitle = styled(Link)`
 const SalesParagraph = styled.p`
   text-align: justify;
 `
-const IndexPage = props => (
-  <Layout hasHero>
+const IndexPage = props => {
+  const [logo, catchImage, heroImage] = props.data.allFile.edges
+  return (<Layout hasHero>
     <SEO
       title="George and the Bear"
       keywords={[`vinyl`, `records`, `coffee`, `music`]}
     />
-    <HeroImage fluid={props.data.heroImage.childImageSharp.fluid}>
+    <HeroImage fluid={heroImage.node.childImageSharp.fluid}>
       <Overlay>
         <ContentBox
           flexDirection="column"
@@ -141,6 +148,7 @@ const IndexPage = props => (
           <h2>YES SIR, WE HAVE BLACK GOLD!</h2>
           <p>George and the Bear is een platenwinkel waar de muziekliefhebber zich thuis voelt, waar men in een unieke sfeer kan luisteren naar muziek, de krant kan lezen of zich kan verdiepen in muziekliteratuur. Naast de nieuwste releases, die op de voet gevolgd worden, beschikken we ook over een ruim assortiment van tweedehandsplaten en de must-have klassiekers in zowat alle genres.</p>
         </CatchParagraph>
+        <CatchImage fluid={catchImage.node.childImageSharp.fluid} />
       </Catch>
       <SalesCatch>
         <h3>In vinyl we trust</h3>
@@ -163,18 +171,27 @@ const IndexPage = props => (
       </SalesWrapper>
     </Content>
   </Layout>
-)
+  )
+}
 
-export const pageQuery = graphql`
-  query {
-    heroImage: file(relativePath: { eq: "images/hero-background2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1080, quality: 100) {
-          ...GatsbyImageSharpFluid
+export const indexImages = graphql`
+  query indexImages {
+    allFile(filter: {relativeDirectory: {eq: "images/index"}}) {
+      edges {
+        node {
+          base
+          childImageSharp {
+            fluid {
+              aspectRatio
+              base64
+              sizes
+              src
+              srcSet
+            }
+          }
         }
       }
     }
   }
 `
-
 export default IndexPage
