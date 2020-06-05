@@ -5,7 +5,7 @@ artist: 'Khruangbin'
 price: 24.99
 label: 'B'
 image: 'record-images/khruangbin-universe.jpg'
-band-origin: 'USA'
+band-origin: 'United States of America'
 country-code: 'US'
 type: 'record'
 ---

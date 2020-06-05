@@ -5,7 +5,7 @@ artist: 'Queen'
 price: 23.50
 label: 'F'
 image: 'record-images/queen-made-in-heaven.jpg'
-band-origin: 'UK'
-country-code: 'UK'
+band-origin: 'United Kingdom'
+country-code: 'GB'
 type: 'record'
 ---

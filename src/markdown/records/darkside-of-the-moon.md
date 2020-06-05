@@ -5,7 +5,7 @@ artist: 'Pink Floyd'
 price: 14.99
 label: 'A'
 image: 'record-images/pink-floyd-darkside.jpg'
-band-origin: 'UK'
-country-code: 'UK'
+band-origin: 'United Kingdom'
+country-code: 'GB'
 type: 'record'
 ---

@@ -5,7 +5,7 @@ artist: 'Pearl Jam'
 price: 19.99
 label: 'X'
 image: 'record-images/pearl-jam-ten.jpg'
-band-origin: 'USA'
+band-origin: 'United States of America'
 country-code: 'US'
 type: 'record'
 ---
