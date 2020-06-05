@@ -27,7 +27,6 @@ const Record = ({ record }) => {
                 publicId={image}
                 width="300"
                 height="300"
-                fetchFormat="auto"
                 secure="true"
             />
             <h3>{title}</h3>
