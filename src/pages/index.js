@@ -9,18 +9,19 @@ import FrontImage from "gatsby-background-image"
 import Img from "gatsby-image"
 
 import Flex from "../components/Flex"
+import Logo from "../components/Logo"
 
+// HEROIMAGE
 const HeroImage = styled(FrontImage)`
   align-self: center;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 `
 
 const Overlay = styled.div`
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
 `
 
@@ -30,7 +31,7 @@ const ContentBox = styled(Flex)`
   margin: 0 auto;
 `
 
-const HeroTitle = styled.h1`
+const ShopLogo = styled(Logo)`
   font-size: 118px;
   font-family: serif;
   color: white;
@@ -48,38 +49,44 @@ const SubHero = styled.h3`
   align-self: right;
   margin: auto 0;
 `
-
+// CONTENT
 const Content = styled.div`
   max-width: 1080px;
   margin: 0 auto;
   padding: 86px 0;
 `
+// CONTENT-CATCH
 const Catch = styled.section`
-  max-width: 100%;
-  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  max-width: 1080px;
+  margin-bottom: 56px;
+  ${'' /* padding: 24px; */}
 `
 const CatchParagraph = styled.section`
+  width: 50%;
   h2 {
     margin: 0 auto; 
     align-self: center;
-    width: 50%;
     font-size: 56px;
     font-weight: 700;
     margin-bottom: 12px;
+    padding: 24px;
   }
   p {
     margin: 0 auto; 
     align-self: center;
-    width: 50%;
     font-weight: 200;
     text-align: justify;
+    padding: 24px;
   }
 `
 const CatchImage = styled(Img)`
-  width: 900px;
+  ${'' /* width: 900px; */}
   margin: 0 auto;
+  flex-grow: 1;
 `
-
+// CONTENT-SALES
 const SalesCatch = styled.div`
   padding: 24px;
   text-align: center;
@@ -118,7 +125,7 @@ const SalesParagraph = styled.p`
   text-align: justify;
 `
 const IndexPage = props => {
-  const [logo, catchImage, heroImage] = props.data.allFile.edges
+  const [catchImage, heroImage] = props.data.allFile.edges
   return (<Layout hasHero>
     <SEO
       title="George and the Bear"
@@ -127,15 +134,10 @@ const IndexPage = props => {
     <HeroImage fluid={heroImage.node.childImageSharp.fluid}>
       <Overlay>
         <ContentBox
-          flexDirection="column"
-          justifyContent="flex-end"
-          alignItems="right"
+          flexDirection="row"
+          justifyContent="center"
         >
-          <HeroTitle>
-            George and
-            <br />
-            the Bear
-          </HeroTitle>
+          <ShopLogo />
           <SubHero>
             – "Record collecting is an infinite journey backwards" –
           </SubHero>
@@ -163,7 +165,6 @@ const IndexPage = props => {
         </SalesSection>
         <SalesSection>
           <SalesTitle to="/about">...we also love to buy yours!</SalesTitle>
-          <br />
           <SalesParagraph>
             Heb je thuis nog een oude platencollectie staan waar je vanaf wil? Wij nemen hem graag van je over! Indien je nog vinyl hebt om door te verkopen, mag je gerust even binnenspringen in de winkel of contact met ons opnemen, zodat we kunnen bekijken welke samenwerking mogelijk is.
           </SalesParagraph>
