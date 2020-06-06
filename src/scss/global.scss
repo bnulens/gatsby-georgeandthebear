@@ -1,5 +1,6 @@
 @import "./reset";
 @import "./layout";
+@import "./colors.scss";
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -8,6 +9,7 @@
 p {
     margin: 0;
     line-height: 22px;
+    color: $paragraph;
 }
 
 ul,
@@ -23,4 +25,10 @@ a {
 
 address {
     margin-bottom: 8px;
+}
+
+h1,
+h2,
+h3 {
+    color: $paragraph;
 }
