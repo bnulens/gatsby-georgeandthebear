@@ -4,17 +4,30 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const LogoWrap = styled.div`
-  flex: 0 1 38px;
-
-  @media (max-width: 768px) and (orientation: landscape) {
-    flex: 0 1 25px;
+  margin: auto;
+`
+const StyledLogo = styled(ShopIcon)`
+  display: block;
+  width: 620px;
+  height: 620px;
+  @media (min-width: 767px) and (max-width: 1080px) and (orientation: landscape) {
+    width: 60vw;
+    height: 60vh;
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    width: 65vw;
+    height: 65vh;
+  }
+  @media screen and (min-width: 320px) and (max-width: 480px){
+    width: 75vw;
+    height: 75vh;
   }
 `
 
 const Logo = () => {
   return (
     <LogoWrap as={Link} to="/">
-      <ShopIcon width="580" height="580" />
+      <StyledLogo />
     </LogoWrap>
   )
 }
