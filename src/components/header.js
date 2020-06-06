@@ -5,13 +5,13 @@ import Navbar from "../components/navbar/Navbar"
 import Flex from "./Flex"
 
 const Wrapper = styled.header`
-  max-width: 1080px;
-  margin: 0 auto;
+  background-color: transparent;
 `
 
 const StyledDiv = styled(Flex)`
-  height: auto;
-  max-width: 960; 
+  height: 10vh;
+  max-width: 1080px; 
+  margin: 0 auto;
   padding: 20px 0;
 `
 
