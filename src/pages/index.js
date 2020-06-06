@@ -19,52 +19,97 @@ const HeroImage = styled(FrontImage)`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @media (min-width: 767px) and (max-width: 1080px) and (orientation: landscape) {
+    height: 80vh;
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    height: 80vh;
+  }
+  @media screen and (min-width: 320px) and (max-width: 480px){
+    height: 85vh;
+  }
 `
 
 const Overlay = styled.div`
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
 `
 
+// CONTENTBOX
 const ContentBox = styled(Flex)`
   height: 100%;
   max-width: 1080px;
   margin: 0 auto;
+  @media (min-width: 767px) and (max-width: 1080px) and (orientation: landscape) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 320px) and (max-width: 480px){
+    display: flex;
+    flex-direction: column;
+  }
 `
-
 const ShopLogo = styled(Logo)`
-  font-size: 118px;
-  font-family: serif;
-  color: white;
-  text-align: right;
-  margin: auto 0;
+  ${'' /* margin: auto 0; */}
 `
-
 const SubHero = styled.h3`
-  font-size: 28px;
+  font-size: 32px;
   font-family: sans-serif;
   font-weight: 200;
   color: white;
-  width: 25%;
+  width: 20vw;
   text-align: justify;
   align-self: right;
   margin: auto 0;
+  @media (min-width: 767px) and (max-width: 1080px) and (orientation: landscape) {
+    font-size: 24px;
+    padding: 24px;
+    width: 100%;
+    text-align: center;
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    font-size: 24px;
+    padding: 24px;
+    width: 100%;
+    text-align: center;
+  }
+  @media screen and (min-width: 320px) and (max-width: 480px){
+    font-size: 16px;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+  }
 `
 // CONTENT
 const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 86px 0;
+  @media screen and (max-width: 320px){
+    padding: 40px 0;
+  }
 `
+
 // CONTENT-CATCH
 const Catch = styled.section`
   display: flex;
   flex-direction: row;
   max-width: 1080px;
   margin-bottom: 56px;
-  ${'' /* padding: 24px; */}
+  @media screen and (max-width: 320px){
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    width: 100%;
+  }
 `
 const CatchParagraph = styled.section`
-  width: 50%;
   h2 {
     margin: 0 auto; 
     align-self: center;
@@ -72,6 +117,11 @@ const CatchParagraph = styled.section`
     font-weight: 700;
     margin-bottom: 12px;
     padding: 24px;
+    @media screen and (max-width: 320px){
+      font-size: 40px;
+      width: 100%;
+      text-align: center;
+    }
   }
   p {
     margin: 0 auto; 
@@ -79,12 +129,22 @@ const CatchParagraph = styled.section`
     font-weight: 200;
     text-align: justify;
     padding: 24px;
+    @media screen and (max-width: 320px){
+      font-size: 16px;
+      font-weight: 300;
+      width: 100%;
+      margin-bottom: 24px;
+    }
   }
 `
 const CatchImage = styled(Img)`
-  ${'' /* width: 900px; */}
+  display: block;
   margin: 0 auto;
   flex-grow: 1;
+  @media screen and (max-width: 320px){
+    width: 100%;
+    height: 100%;
+  }
 `
 // CONTENT-SALES
 const SalesCatch = styled.div`
@@ -94,13 +154,13 @@ const SalesCatch = styled.div`
   h3 {  
     font-size: 48px;
   }
-  span {
+  p {
     font-size: 24px;
     font-weight: 200;
   }
 `
 const SalesWrapper = styled(Flex)`
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
   }
@@ -119,9 +179,10 @@ const SalesTitle = styled(Link)`
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 16px;
-  color: #051313;
+  color: $paragraph;
 `
 const SalesParagraph = styled.p`
+  color: $paragraph;
   text-align: justify;
 `
 const IndexPage = props => {
@@ -154,7 +215,7 @@ const IndexPage = props => {
       </Catch>
       <SalesCatch>
         <h3>In vinyl we trust</h3>
-        <span>You want it, we got it</span>
+        <p>– You want it, we got it –</p>
       </SalesCatch>
       <SalesWrapper>
         <SalesSection>
