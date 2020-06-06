@@ -47,6 +47,7 @@ const SocialLink = styled.a`
 const StyledFlex = styled(Flex)`
     h2 {
         font-size: 24px;
+        color: white;
     }
 `;
 
