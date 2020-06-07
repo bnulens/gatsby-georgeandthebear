@@ -11,24 +11,27 @@ const Wrapper = styled.footer`
     width: 100%;
     height: 100%;
     border-radius: 15% 15% 0 0;
-    position: relative;
     color: white;
     background-color: rgb(38,33,30);
     overflow: hidden;
-`;
+`
 
 const InnerWrapper = styled.div` 
     max-width: 1080px;
     margin: 0 auto;
     padding: 60px 0;
-`;
+`
 
 const SocialBar = styled.nav`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 24px 0;
-`;
+    padding: 24px 16px;
+    @media screen and (min-width: 320px) and (max-width: 868px) {
+        display: flex;
+        justify-content: center;
+    }
+`
 
 const SocialLink = styled.a`
     filter: invert(0.5);
@@ -38,39 +41,46 @@ const SocialLink = styled.a`
         filter: invert(0.8);
         transition: all ease 0.6s;
     }
-
     :focus {
         filter: invert(0.8);
     }
-`;
+`
 
 const StyledFlex = styled(Flex)`
     h2 {
         font-size: 24px;
         color: white;
     }
-`;
+    @media screen and (min-width: 320px) and (max-width: 720px){
+        display: flex;
+        flex-direction: column;
+    }
+`
 
 const Locations = styled.section`
     font-family: "Courier New", Courier, monospace;
-    min-width: 220px;
+    padding: 24px;
     text-align: left;
     a {
         color: white;
     }
-`;
+    @media screen and (min-width: 320px) and (max-width: 720px) and (orientation: landscape){
+        padding: 32px;
+    }
+`
 
 const OpeningHours = styled.section`
     font-family: "Courier New", Courier, monospace;
-    min-width: 220px;
     text-align: right;
-`;
+    padding: 24px;
+    @media screen and (min-width: 320px) and (max-width: 720px) and (orientation: landscape){
+        padding: 32px;
+    }
+`
 
 const ListItem = styled.li`
     margin-bottom: 8px;
-`;
-
-
+`
 const Footer = () => {
 
     const openingDays = [
@@ -112,7 +122,7 @@ const Footer = () => {
                         <Email width="32" height="32" />
                     </SocialLink>
                 </SocialBar>
-                <StyledFlex justifyContent="space-between" alignItems="flex-start">
+                <StyledFlex justifyContent="space-between" alignItems="flex-start" alignItems="center">
                     <Locations>
                         <h2>Locatie</h2>
                         <address
