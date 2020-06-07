@@ -187,52 +187,53 @@ const SalesParagraph = styled.p`
 `
 const IndexPage = props => {
   const [catchImage, heroImage] = props.data.allFile.edges
-  return (<Layout hasHero>
-    <SEO
-      title="George and the Bear"
-      keywords={[`vinyl`, `records`, `coffee`, `music`]}
-    />
-    <HeroImage fluid={heroImage.node.childImageSharp.fluid}>
-      <Overlay>
-        <ContentBox
-          flexDirection="row"
-          justifyContent="center"
-        >
-          <ShopLogo />
-          <SubHero>
-            – "Record collecting is an infinite journey backwards" –
-          </SubHero>
-        </ContentBox>
-      </Overlay>
-    </HeroImage>
-    <Content>
-      <Catch>
-        <CatchParagraph>
-          <h2>YES SIR, WE HAVE BLACK GOLD!</h2>
-          <p>George and the Bear is een platenwinkel waar de muziekliefhebber zich thuis voelt, waar men in een unieke sfeer kan luisteren naar muziek, de krant kan lezen of zich kan verdiepen in muziekliteratuur. Naast de nieuwste releases, die op de voet gevolgd worden, beschikken we ook over een ruim assortiment van tweedehandsplaten en de must-have klassiekers in zowat alle genres.</p>
-        </CatchParagraph>
-        <CatchImage fluid={catchImage.node.childImageSharp.fluid} />
-      </Catch>
-      <SalesCatch>
-        <h3>In vinyl we trust</h3>
-        <p>– You want it, we got it –</p>
-      </SalesCatch>
-      <SalesWrapper>
-        <SalesSection>
-          <SalesTitle to="/shop">We have the right record for everyone...</SalesTitle>
-          <SalesParagraph>
-            George and the Bear biedt muziekliefhebbers een ruim aanbod aan vinyl, met genres variërend van rock, pop, punk, jazz, blues, hardcore, indie, new wave en metal tot house, techno, dance of hiphop. Een groot deel van de collectie bestaat uit tweedehandsplaten in goede staat - maar ook de nieuwste releases kan je in onze rekken terugvinden.
-          </SalesParagraph>
-        </SalesSection>
-        <SalesSection>
-          <SalesTitle to="/about">...we also love to buy yours!</SalesTitle>
-          <SalesParagraph>
-            Heb je thuis nog een oude platencollectie staan waar je vanaf wil? Wij nemen hem graag van je over! Indien je nog vinyl hebt om door te verkopen, mag je gerust even binnenspringen in de winkel of contact met ons opnemen, zodat we kunnen bekijken welke samenwerking mogelijk is.
-          </SalesParagraph>
-        </SalesSection>
-      </SalesWrapper>
-    </Content>
-  </Layout>
+  return (
+    <Layout hasHero>
+      <SEO
+        title="George and the Bear"
+        keywords={[`vinyl`, `records`, `coffee`, `music`]}
+      />
+      <HeroImage fluid={heroImage.node.childImageSharp.fluid}>
+        <Overlay>
+          <ContentBox
+            flexDirection="row"
+            justifyContent="center"
+          >
+            <ShopLogo />
+            <SubHero>
+              – "Record collecting is an infinite journey backwards" –
+            </SubHero>
+          </ContentBox>
+        </Overlay>
+      </HeroImage>
+      <Content>
+        <Catch>
+          <CatchParagraph>
+            <h2>YES SIR, WE HAVE BLACK GOLD!</h2>
+            <p>George and the Bear is een platenwinkel waar de muziekliefhebber zich thuis voelt, waar men in een unieke sfeer kan luisteren naar muziek, de krant kan lezen of zich kan verdiepen in muziekliteratuur. Naast de nieuwste releases, die op de voet gevolgd worden, beschikken we ook over een ruim assortiment van tweedehandsplaten en de must-have klassiekers in zowat alle genres.</p>
+          </CatchParagraph>
+          <CatchImage fluid={catchImage.node.childImageSharp.fluid} />
+        </Catch>
+        <SalesCatch>
+          <h3>In vinyl we trust</h3>
+          <p>– You want it, we got it –</p>
+        </SalesCatch>
+        <SalesWrapper>
+          <SalesSection>
+            <SalesTitle to="/shop">We have the right record for everyone...</SalesTitle>
+            <SalesParagraph>
+              George and the Bear biedt muziekliefhebbers een ruim aanbod aan vinyl, met genres variërend van rock, pop, punk, jazz, blues, hardcore, indie, new wave en metal tot house, techno, dance of hiphop. Een groot deel van de collectie bestaat uit tweedehandsplaten in goede staat - maar ook de nieuwste releases kan je in onze rekken terugvinden.
+            </SalesParagraph>
+          </SalesSection>
+          <SalesSection>
+            <SalesTitle to="/about">...we also love to buy yours!</SalesTitle>
+            <SalesParagraph>
+              Heb je thuis nog een oude platencollectie staan waar je vanaf wil? Wij nemen hem graag van je over! Indien je nog vinyl hebt om door te verkopen, mag je gerust even binnenspringen in de winkel of contact met ons opnemen, zodat we kunnen bekijken welke samenwerking mogelijk is.
+            </SalesParagraph>
+          </SalesSection>
+        </SalesWrapper>
+      </Content>
+    </Layout>
   )
 }
 
