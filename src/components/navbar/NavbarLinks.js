@@ -29,13 +29,13 @@ const NavItem = styled(Link)`
   }
 
   :hover {
-    color: black;
+    color: white;
     ::after {
       width: 100%;
     }
   }
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     padding: 20px 0;
     font-size: 1.5rem;
     z-index: 6;
