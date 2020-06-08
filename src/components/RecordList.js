@@ -1,7 +1,7 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
-import Record from './Record.js'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import Record from "./Record.js"
 
 const Grid = styled.div`
   margin-top: 30px;
@@ -16,8 +16,6 @@ const Grid = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `
-
-
 const RecordList = () => {
   const data = useStaticQuery(graphql`
         query {
