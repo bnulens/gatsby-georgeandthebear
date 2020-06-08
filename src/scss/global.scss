@@ -1,6 +1,9 @@
 @import "./reset";
 @import "./layout";
-@import "./colors.scss";
+
+// Colors
+$paragraph: #051313;
+$aux: #130b01;
 
 * {
     font-family: 'Roboto', sans-serif;
