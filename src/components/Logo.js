@@ -8,19 +8,19 @@ const LogoWrap = styled.div`
 `
 const StyledLogo = styled(ShopIcon)`
   display: block;
-  width: 620px;
-  height: 620px;
-  @media (min-width: 767px) and (max-width: 1080px) and (orientation: landscape) {
-    width: 60vw;
-    height: 60vh;
+  height: auto;
+  width: 420px;
+  @media screen and (min-width: 767px) and (max-width: 992px) {
+    width: 520px;
   }
-  @media (min-width: 480px) and (max-width: 767px) {
-    width: 65vw;
-    height: 65vh;
+  @media screen and (min-width: 413px) and (max-width: 767px) {
+    width: 380px;
   }
-  @media screen and (min-width: 320px) and (max-width: 480px){
-    width: 75vw;
-    height: 75vh;
+  @media screen and (min-width: 374px) and (max-width: 413px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 374px) {
+    width: 280px;
   }
 `
 
