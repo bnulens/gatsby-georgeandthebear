@@ -11,16 +11,16 @@ const StyledLogo = styled(ShopIcon)`
   height: auto;
   width: 420px;
   @media screen and (min-width: 767px) and (max-width: 992px) {
-    width: 520px;
+    width: 320px;
   }
   @media screen and (min-width: 413px) and (max-width: 767px) {
-    width: 380px;
+    width: 320px;
   }
   @media screen and (min-width: 374px) and (max-width: 413px) {
     width: 320px;
   }
   @media screen and (min-width: 320px) and (max-width: 374px) {
-    width: 280px;
+    width: 300px;
   }
 `
 
