@@ -1,32 +1,38 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { Link } from "gatsby"
-
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import FrontImage from "gatsby-background-image"
 import Img from "gatsby-image"
 
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Flex from "../components/Flex"
-import Logo from "../components/Logo"
+import ShopLogo from "../components/Logo"
 
 // HEROIMAGE
 const HeroImage = styled(FrontImage)`
   align-self: center;
-  width: 100%;
-  height: 90vh;
+  width: auto;
+  height: 600px;
+  margin-bottom: 56px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  @media (min-width: 767px) and (max-width: 1080px) and (orientation: landscape) {
-    height: 80vh;
+  @media screen and (min-width: 992px) and (max-width: 1024px) {
+    height: 524px;
   }
-  @media (min-width: 480px) and (max-width: 767px) {
-    height: 80vh;
+  @media screen and (min-width: 767px) and (max-width: 991px) {
+    height: 580px;
   }
-  @media screen and (min-width: 320px) and (max-width: 480px){
-    height: 85vh;
+  @media screen and (min-width: 414px) and (max-width: 766px) {
+    height: 588px;
+  }
+  @media screen and (min-width: 375px) and (max-width: 413px) {
+    height: 592px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 374px) {
+    height: 512px;
   }
 `
 
@@ -40,47 +46,46 @@ const ContentBox = styled(Flex)`
   height: 100%;
   max-width: 1080px;
   margin: 0 auto;
-  @media (min-width: 767px) and (max-width: 1080px) and (orientation: landscape) {
+  @media (min-width: 768px) and (max-width: 992px) {
+    display: flex;
+    flex-direction: row;
+  }
+  @media (min-width: 479px) and (max-width: 768px) {
     display: flex;
     flex-direction: column;
   }
-  @media (min-width: 480px) and (max-width: 767px) {
+  @media (min-width: 320px) and (max-width: 480px) {
     display: flex;
     flex-direction: column;
   }
-  @media screen and (min-width: 320px) and (max-width: 480px){
-    display: flex;
-    flex-direction: column;
-  }
-`
-const ShopLogo = styled(Logo)`
-  ${'' /* margin: auto 0; */}
 `
 const SubHero = styled.h3`
   font-size: 32px;
   font-family: sans-serif;
   font-weight: 200;
   color: white;
-  width: 20vw;
-  text-align: justify;
-  align-self: right;
+  width: 100%;
+  text-align: center;
   margin: auto 0;
-  @media (min-width: 767px) and (max-width: 1080px) and (orientation: landscape) {
-    font-size: 24px;
-    padding: 24px;
-    width: 100%;
+  @media screen and (min-width: 414px) and (max-width: 767px) {
+    font-size: 32px;
+    padding: 32px;
+    width: 75%;
+    align-self: center;
     text-align: center;
   }
-  @media (min-width: 480px) and (max-width: 767px) {
+  @media screen and (min-width: 375px) and (max-width: 413px) {
     font-size: 24px;
     padding: 24px;
-    width: 100%;
+    width: 50%;
+    align-self: center;
     text-align: center;
   }
-  @media screen and (min-width: 320px) and (max-width: 480px){
-    font-size: 16px;
+  @media screen and (min-width: 320px) and (max-width: 374px) {
+    font-size: 24px;
     padding: 8px;
-    width: 100%;
+    width: 80%;
+    align-self: center;
     text-align: center;
   }
 `
@@ -91,59 +96,61 @@ const Content = styled.div`
   justify-content: center;
   max-width: 1080px;
   margin: 0 auto;
-  @media screen and (max-width: 320px){
-    padding: 40px 0;
+  @media screen and (min-width: 320px) and (max-width: 1024px){
+    padding: 32px;
   }
 `
 
 // CONTENT-CATCH
-const Catch = styled.section`
+const CatchWrapper = styled.section`
   display: flex;
   flex-direction: row;
   max-width: 1080px;
   margin-bottom: 56px;
-  @media screen and (max-width: 320px){
+  @media screen and (min-width: 320px) and (max-width: 1280px) {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
-    width: 100%;
   }
 `
 const CatchParagraph = styled.section`
   h2 {
-    margin: 0 auto; 
-    align-self: center;
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 700;
-    margin-bottom: 12px;
-    padding: 24px;
-    @media screen and (max-width: 320px){
+    text-align: left;
+    align-self: left;
+    margin: 0 auto; 
+    margin-bottom: 16px;
+    padding: 16px;
+    width: 15vw;
+    @media screen and (min-width: 320px) and (max-width: 1280px){
       font-size: 40px;
-      width: 100%;
       text-align: center;
+      align-self: center;
+      width: 100%;
     }
   }
   p {
     margin: 0 auto; 
-    align-self: center;
     font-weight: 200;
     text-align: justify;
     padding: 24px;
-    @media screen and (max-width: 320px){
+    width: 15vw;
+    @media screen and (min-width: 320px) and (max-width: 1280px){
       font-size: 16px;
       font-weight: 300;
-      width: 100%;
+      text-align: justify;
+      align-self: center;
       margin-bottom: 24px;
+      width: 50%;
     }
   }
 `
 const CatchImage = styled(Img)`
   display: block;
   margin: 0 auto;
-  flex-grow: 1;
-  @media screen and (max-width: 320px){
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  @media screen and (min-width: 320px) and (max-width: 786px){
+    height: auto;
   }
 `
 // CONTENT-SALES
@@ -207,13 +214,16 @@ const IndexPage = props => {
         </Overlay>
       </HeroImage>
       <Content>
-        <Catch>
+        <CatchWrapper>
           <CatchParagraph>
-            <h2>YES SIR, WE HAVE BLACK GOLD!</h2>
-            <p>George and the Bear is een platenwinkel waar de muziekliefhebber zich thuis voelt, waar men in een unieke sfeer kan luisteren naar muziek, de krant kan lezen of zich kan verdiepen in muziekliteratuur. Naast de nieuwste releases, die op de voet gevolgd worden, beschikken we ook over een ruim assortiment van tweedehandsplaten en de must-have klassiekers in zowat alle genres.</p>
+            <h2>Yes sir, we have black gold</h2>
+            <p>George and the Bear is een platenwinkel waar de muziekliefhebber zich thuis voelt, waar men in een unieke sfeer kan luisteren naar muziek, de krant kan lezen of zich kan verdiepen in muziekliteratuur.</p>
           </CatchParagraph>
           <CatchImage fluid={catchImage.node.childImageSharp.fluid} />
-        </Catch>
+          <CatchParagraph>
+            <p> Naast de nieuwste releases, die op de voet gevolgd worden, beschikken we ook over een ruim assortiment van tweedehandsplaten en de must-have klassiekers in zowat alle genres.</p>
+          </CatchParagraph>
+        </CatchWrapper>
         <SalesCatch>
           <h3>In vinyl we trust</h3>
           <p>– You want it, we got it –</p>
