@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { Image } from "cloudinary-react"
 import Flex from "../components/Flex"
@@ -14,15 +14,13 @@ const StyledWrapperLink = styled(Link)`
     flex: 0 0 auto;
 `
 const ImageOverlay = styled(Flex)`
+    visibility: hidden;
     display: block;
     position: absolute;
     padding: 48px;
     height: 300px;
     width: 300px;
     border: 1px solid red;
-    ${'' /* -webkit-box-shadow: 0px 0px 30px 3px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 0px 30px 3px rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 30px 3px rgba(0,0,0,0.1); */}
     
     h3 {
         white-space: nowrap;
@@ -45,11 +43,23 @@ const ImageOverlay = styled(Flex)`
         width: 300px;
         margin: auto 0;
     }
+    
+`
+const RecordInfo = styled.div`
+    border: 1px solid blue;
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    z-index: 5;
+    ${ImageOverlay}:hover & {
+        visibilty: visible;
+    } 
 `
 
 const Record = ({ record }) => {
     const { title, image, price, artist, band_origin, country_code } = record.node.frontmatter;
     const { slug } = record.node.fields;
+    const [toggleInfo, showRecordInfo] = useState(false);
     return (
         <StyledWrapperLink to={slug}>
             <Image
@@ -62,16 +72,23 @@ const Record = ({ record }) => {
             <ImageOverlay
                 flexDirection="column"
                 justifyContent="space-around"
-            // className={hasPointer() ? "seeInfo" : "seeImage"}
+                toggleInfo={toggleInfo}
+                onClick={() => showRecordInfo(!toggleInfo)}
             >
-                <h3>{title}</h3>
-                <p>{artist}</p>
-                <span>€ {price}</span>
-                <ReactCountryFlag
-                    className="emojiFlag"
-                    countryCode={country_code}
-                    aria-label={band_origin}
-                />
+                {toggleInfo ? (
+                    <RecordInfo>
+                        <h3>{title}</h3>
+                        <p>{artist}</p>
+                        <span>€ {price}</span>
+                        <ReactCountryFlag
+                            className="emojiFlag"
+                            countryCode={country_code}
+                            aria-label={band_origin}
+                        />
+                    </RecordInfo>
+                ) : (
+                        <RecordInfo show />
+                    )}
             </ImageOverlay>
         </StyledWrapperLink>
     )
