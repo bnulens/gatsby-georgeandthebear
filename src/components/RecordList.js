@@ -9,10 +9,10 @@ const Grid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px 10px;
   grid-auto-flow: row dense;
-  @media screen and (max-width: 890px) {
+  @media screen and (max-width: 888px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 648px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `
