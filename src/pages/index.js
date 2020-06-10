@@ -141,7 +141,7 @@ const CatchParagraph = styled.section`
       text-align: justify;
       align-self: center;
       margin-bottom: 24px;
-      width: 50%;
+      width: 100%;
     }
   }
 `
@@ -192,14 +192,76 @@ const SalesParagraph = styled.p`
   color: $paragraph;
   text-align: justify;
 `
+const TalentWrapper = styled.div`
+  position: relative; 
+  max-width: 1080px;
+  margin-bottom: 80px;
+  margin: 0 auto;
+  @media screen and (min-width: 320px) and (max-width: 766px) {
+    position: static;
+  }
+`
+const TalentImage = styled(Img)`
+  display: block;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto 80px;
+  max-width: 1080px;
+`
+const TalentOverlay = styled.section`
+  padding: 24px;
+  height: 100vh;
+  h2 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    width: 100%;
+    @media screen and (min-width: 992px) {
+      font-size: 56px;
+      text-align: left;
+      color: white;
+      width: 90%;
+      padding: 8px;
+    }
+  }
+  p {
+    font-weight: 300;
+    color: black;
+    text-align: justify;
+    margin-bottom: 16px;
+    @media screen and (min-width: 992px) {
+      font-size: 22px;
+      color: white;
+      width: 75%;
+      height: 100%;
+      padding: 8px;
+    }
+  }
+  @media screen and (min-width: 992px){
+    position: absolute;
+    width: 35vw;
+    top: 0;
+    right: 0;
+    padding: 32px;
+    background-color: rgba(0,0,0,0.2);
+  }
+`
+const TalentContent = styled.div`
+  margin: 0 auto 80px;
+  max-width: 1080px;
+  width: 50%;
+  text-align: justify;
+`
+
 const IndexPage = props => {
-  const [catchImage, heroImage] = props.data.allFile.edges
+  const [talentImage, heroImage, catchImage] = props.data.allFile.edges
   return (
     <Layout hasHero>
       <SEO
         title="George and the Bear"
         keywords={[`vinyl`, `records`, `coffee`, `music`]}
       />
+      {/* HeroImage */}
       <HeroImage fluid={heroImage.node.childImageSharp.fluid}>
         <Overlay>
           <ContentBox
@@ -213,7 +275,9 @@ const IndexPage = props => {
           </ContentBox>
         </Overlay>
       </HeroImage>
+      {/* General Content */}
       <Content>
+        {/* Catch */}
         <CatchWrapper>
           <CatchParagraph>
             <h2>Yes sir, we have black gold</h2>
@@ -224,10 +288,12 @@ const IndexPage = props => {
             <p> Naast de nieuwste releases, die op de voet gevolgd worden, beschikken we ook over een ruim assortiment van tweedehandsplaten en de must-have klassiekers in zowat alle genres.</p>
           </CatchParagraph>
         </CatchWrapper>
+        {/* SalesCatch */}
         <SalesCatch>
           <h3>In vinyl we trust</h3>
           <p>– You want it, we got it –</p>
         </SalesCatch>
+        {/* Sales */}
         <SalesWrapper>
           <SalesSection>
             <SalesTitle to="/shop">We have the right record for everyone...</SalesTitle>
@@ -242,6 +308,19 @@ const IndexPage = props => {
             </SalesParagraph>
           </SalesSection>
         </SalesWrapper>
+        {/* Talent */}
+        <TalentWrapper>
+          <TalentImage fluid={talentImage.node.childImageSharp.fluid} />
+          <TalentOverlay>
+            <h2>FOR THE YOUNG, THE WILD AND THE NEWBIES</h2>
+            <p>George and the Bear heeft niet alleen oog voor de internationale en Belgische scene, maar wil tevens een ondersteunende functie bieden voor onze boeiende lokale muziekscene. Door een platform uit te bouwen voor jonge muzikanten wil George and the Bear artiesten uit Genk en omstreken helpen hun weg te vinden en hun publiek uit te breiden.
+            </p>
+          </TalentOverlay>
+          <TalentContent>
+            <p>Beginnende bands kunnen hun cd in de rekken van George and the Bear te koop stellen, en zo hun sound bekend maken bij een groter publiek van muziekliefhebbers. Wij bieden ook een podium aan voor akoestische optredens, dit in het koffiegedeelte van de winkel in een relaxte sfeer.</p>
+            <p>Hebben jullie net een nieuwe plaat opgenomen? Kom hem dan voorstellen bij George and the Bear, waar we je kunnen helpen bij de cd-release.</p>
+          </TalentContent>
+        </TalentWrapper>
       </Content>
     </Layout>
   )
