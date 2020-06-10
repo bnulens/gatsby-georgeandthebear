@@ -122,7 +122,7 @@ const Footer = () => {
                         <Email width="32" height="32" />
                     </SocialLink>
                 </SocialBar>
-                <StyledFlex justifyContent="space-between" alignItems="flex-start" alignItems="center">
+                <StyledFlex justifyContent="space-between" alignItems="flex-start">
                     <Locations>
                         <h2>Locatie</h2>
                         <address
