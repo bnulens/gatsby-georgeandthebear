@@ -8,7 +8,7 @@ const NavItem = styled(Link)`
   font-weight: 200;
   -ms-font-weight: 200;
   text-decoration: none;
-  color: #666;
+  color: #aaa;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
@@ -29,7 +29,7 @@ const NavItem = styled(Link)`
   }
 
   :hover {
-    color: white;
+    color: black;
     ::after {
       width: 100%;
     }
