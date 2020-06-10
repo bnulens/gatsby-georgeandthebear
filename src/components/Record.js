@@ -14,6 +14,7 @@ const StyledWrapperLink = styled(Link)`
     flex: 0 0 auto;
 `
 const ImageOverlay = styled(Flex)`
+    display: block;
     position: absolute;
     padding: 48px;
     height: 300px;
@@ -58,7 +59,11 @@ const Record = ({ record }) => {
                 height="300"
                 secure="true"
             />
-            <ImageOverlay flexDirection="column" justifyContent="space-around">
+            <ImageOverlay
+                flexDirection="column"
+                justifyContent="space-around"
+            // className={hasPointer() ? "seeInfo" : "seeImage"}
+            >
                 <h3>{title}</h3>
                 <p>{artist}</p>
                 <span>€ {price}</span>
