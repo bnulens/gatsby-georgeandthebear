@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import { Image } from "cloudinary-react"
 import Flex from "../components/Flex"
@@ -15,6 +15,7 @@ const StyledWrapperLink = styled(Link)`
 const Wrapper = styled.div`
   height: 300px;
   width: 300px;
+  margin: 0 auto;
   perspective: 1000px;
 
   &:hover ${StyledWrapperLink} {
@@ -40,8 +41,11 @@ const RecordInfo = styled(Flex)`
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: blue;
+  background-color: #357;
   color: white;
+  -webkit-box-shadow: 0px 9px 30px -4px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 9px 30px -4px rgba(0,0,0,0.3);
+  box-shadow: 0px 9px 30px -4px rgba(0,0,0,0.3);
 
   h3 {
     width: 100%;
@@ -71,45 +75,45 @@ const RecordInfo = styled(Flex)`
 `
 
 const Record = ({ record }) => {
-  const {
-    title,
-    image,
-    price,
-    artist,
-    band_origin,
-    country_code,
-  } = record.node.frontmatter
-  const { slug } = record.node.fields
+    const {
+        title,
+        image,
+        price,
+        artist,
+        band_origin,
+        country_code,
+    } = record.node.frontmatter
+    const { slug } = record.node.fields
 
-  return (
-    <Wrapper>
-      <StyledWrapperLink to={slug}>
-        <RecordFront
-          cloudName="bnulens"
-          publicId={image}
-          width="300"
-          height="300"
-          secure="true"
-        />
-        <RecordBack>
-          <RecordInfo
-            flexDirection="column"
-            justifyContent="space-around"
-            alignItems="center"
-          >
-            <h3>{title}</h3>
-            <p>{artist}</p>
-            <span>€ {price}</span>
-            <ReactCountryFlag
-              className="emojiFlag"
-              countryCode={country_code}
-              aria-label={band_origin}
-            />
-          </RecordInfo>
-        </RecordBack>
-      </StyledWrapperLink>
-    </Wrapper>
-  )
+    return (
+        <Wrapper>
+            <StyledWrapperLink to={slug}>
+                <RecordFront
+                    cloudName="bnulens"
+                    publicId={image}
+                    width="300"
+                    height="300"
+                    secure="true"
+                />
+                <RecordBack>
+                    <RecordInfo
+                        flexDirection="column"
+                        justifyContent="space-around"
+                        alignItems="center"
+                    >
+                        <h3>{title}</h3>
+                        <p>{artist}</p>
+                        <span>€ {price}</span>
+                        <ReactCountryFlag
+                            className="emojiFlag"
+                            countryCode={country_code}
+                            aria-label={band_origin}
+                        />
+                    </RecordInfo>
+                </RecordBack>
+            </StyledWrapperLink>
+        </Wrapper>
+    )
 }
 
 export default Record
