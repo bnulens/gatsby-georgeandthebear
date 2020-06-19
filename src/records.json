@@ -3,241 +3,778 @@
     "artist": "Red Hot Chili Peppers",
     "title": "Californication",
     "songs": [
-      { "name": "Around the World", "length": "3:58" },
-      { "name": "Parallel Universe", "length": "4:30" },
-      { "name": "Scar Tissue", "length": "3:37" },
-      { "name": "Otherside", "length": "4:15" },
-      { "name": "Get on Top", "length": "3:18" },
-      { "name": "Californication", "length": "5:21" },
-      { "name": "Easily", "length": "3:51" },
-      { "name": "Porcelain", "length": "2:43" },
-      { "name": "Emit Remmus", "length": "4:00" },
-      { "name": "I Like Dirt", "length": "2:37" },
-      { "name": "This Velvet Glove", "length": "3:45" },
-      { "name": "Savior", "length": "4:52" },
-      { "name": "Purple Stain", "length": "4:13" },
-      { "name": "Right on Time", "length": "1:52" },
-      { "name": "Road Trippin'", "length": "3:25" }
+      {
+        "name": "Around the World",
+        "length": "3:58"
+      },
+      {
+        "name": "Parallel Universe",
+        "length": "4:30"
+      },
+      {
+        "name": "Scar Tissue",
+        "length": "3:37"
+      },
+      {
+        "name": "Otherside",
+        "length": "4:15"
+      },
+      {
+        "name": "Get on Top",
+        "length": "3:18"
+      },
+      {
+        "name": "Californication",
+        "length": "5:21"
+      },
+      {
+        "name": "Easily",
+        "length": "3:51"
+      },
+      {
+        "name": "Porcelain",
+        "length": "2:43"
+      },
+      {
+        "name": "Emit Remmus",
+        "length": "4:00"
+      },
+      {
+        "name": "I Like Dirt",
+        "length": "2:37"
+      },
+      {
+        "name": "This Velvet Glove",
+        "length": "3:45"
+      },
+      {
+        "name": "Savior",
+        "length": "4:52"
+      },
+      {
+        "name": "Purple Stain",
+        "length": "4:13"
+      },
+      {
+        "name": "Right on Time",
+        "length": "1:52"
+      },
+      {
+        "name": "Road Trippin'",
+        "length": "3:25"
+      }
     ]
   },
   "dr-dre-2001": {
     "artist": "Dr Dre",
     "title": "2001",
     "songs": [
-      { "name": "Lolo (Intro)", "length": "0:40" },
-      { "name": "The Watcher", "length": "3:28" },
-      { "name": "Fuck You", "length": "3:25" },
-      { "name": "Still D.R.E.", "length": "4:28" },
-      { "name": "Big Ego's", "length": "4:01" },
-      { "name": "Xxplosive", "length": "3:35" },
-      { "name": "What's the Difference", "length": "4:04" },
-      { "name": "Bar One", "length": "0:51" },
-      { "name": "Light Speed", "length": "2:41" },
-      { "name": "Forgot About Dre", "length": "3:42" },
-      { "name": "The Next Episode", "length": "2:42" },
-      { "name": "Let's Get High", "length": "2:27" },
-      { "name": "Bitch Niggaz", "length": "4:14" },
-      { "name": "The Car Bomb", "length": "1:01" },
-      { "name": "Murder Ink", "length": "2:28" },
-      { "name": "Ed-ucation", "length": "1:32" },
-      { "name": "Some L.A. Niggaz", "length": "4:25" },
-      { "name": "Pause 4 Porno", "length": "1:33" },
-      { "name": "Housewife", "length": "4:03" },
-      { "name": "Ackrite", "length": "3:40" },
-      { "name": "Bang Bang", "length": "3:42" },
-      { "name": "The Message", "length": "5:29" }
+      {
+        "name": "Lolo (Intro)",
+        "length": "0:40"
+      },
+      {
+        "name": "The Watcher",
+        "length": "3:28"
+      },
+      {
+        "name": "Fuck You",
+        "length": "3:25"
+      },
+      {
+        "name": "Still D.R.E.",
+        "length": "4:28"
+      },
+      {
+        "name": "Big Ego's",
+        "length": "4:01"
+      },
+      {
+        "name": "Xxplosive",
+        "length": "3:35"
+      },
+      {
+        "name": "What's the Difference",
+        "length": "4:04"
+      },
+      {
+        "name": "Bar One",
+        "length": "0:51"
+      },
+      {
+        "name": "Light Speed",
+        "length": "2:41"
+      },
+      {
+        "name": "Forgot About Dre",
+        "length": "3:42"
+      },
+      {
+        "name": "The Next Episode",
+        "length": "2:42"
+      },
+      {
+        "name": "Let's Get High",
+        "length": "2:27"
+      },
+      {
+        "name": "Bitch Niggaz",
+        "length": "4:14"
+      },
+      {
+        "name": "The Car Bomb",
+        "length": "1:01"
+      },
+      {
+        "name": "Murder Ink",
+        "length": "2:28"
+      },
+      {
+        "name": "Ed-ucation",
+        "length": "1:32"
+      },
+      {
+        "name": "Some L.A. Niggaz",
+        "length": "4:25"
+      },
+      {
+        "name": "Pause 4 Porno",
+        "length": "1:33"
+      },
+      {
+        "name": "Housewife",
+        "length": "4:03"
+      },
+      {
+        "name": "Ackrite",
+        "length": "3:40"
+      },
+      {
+        "name": "Bang Bang",
+        "length": "3:42"
+      },
+      {
+        "name": "The Message",
+        "length": "5:29"
+      }
     ]
   },
   "pink-floyd-darkside-of-the-moon": {
     "artist": "Pink Floyd",
     "title": "Dark Side of the Moon",
     "songs": [
-      { "name": "Speak to Me", "length": "1:30" },
-      { "name": "Breathe", "length": "2:43" },
-      { "name": "On the Run", "length": "3:36" },
-      { "name": "Time", "length": "7:01" },
-      { "name": "The Great Gig in the Sky", "length": "4:36" },
-      { "name": "Money", "length": "6:22" },
-      { "name": "Us and Them", "length": "7:46" },
-      { "name": "Any Colour You Like", "length": "3:25" },
-      { "name": "Brain Damage", "length": "3:48" },
-      { "name": "Eclipse", "length": "2:03" }
+      {
+        "name": "Speak to Me",
+        "length": "1:30"
+      },
+      {
+        "name": "Breathe",
+        "length": "2:43"
+      },
+      {
+        "name": "On the Run",
+        "length": "3:36"
+      },
+      {
+        "name": "Time",
+        "length": "7:01"
+      },
+      {
+        "name": "The Great Gig in the Sky",
+        "length": "4:36"
+      },
+      {
+        "name": "Money",
+        "length": "6:22"
+      },
+      {
+        "name": "Us and Them",
+        "length": "7:46"
+      },
+      {
+        "name": "Any Colour You Like",
+        "length": "3:25"
+      },
+      {
+        "name": "Brain Damage",
+        "length": "3:48"
+      },
+      {
+        "name": "Eclipse",
+        "length": "2:03"
+      }
     ]
   },
   "gipsy-kings-volare": {
     "artist": "Gipsy Kings",
     "title": "Volare",
     "songs": [
-      { "name": "Djobi Djoba", "length": "3:27" },
-      { "name": "Baila Me", "length": "3:47" },
-      { "name": "Bamboléo", "length": "3:25" },
-      { "name": "Pida Me La", "length": "3:18" },
-      { "name": "Bem, Bem, Maria", "length": "3:06" },
-      { "name": "Volare", "length": "3:41" },
-      { "name": "Moorea", "length": "4:05" },
-      { "name": "A Mi Manera", "length": "3:54" },
-      { "name": "Un Amor", "length": "3:40" },
-      { "name": "Galaxia", "length": "2:37" },
-      { "name": "Escucha Me", "length": "4:39" },
-      { "name": "Tu Quieres Volver", "length": "3:14" },
-      { "name": "Soy", "length": "3:12" },
-      { "name": "La Quiero", "length": "3:45" },
-      { "name": "Allegria", "length": "2:50" },
-      { "name": "Vamos A Bailar", "length": "4:56" },
-      { "name": "La Dona", "length": "4:35" },
-      { "name": "Medley", "length": "4:48" }
+      {
+        "name": "Djobi Djoba",
+        "length": "3:27"
+      },
+      {
+        "name": "Baila Me",
+        "length": "3:47"
+      },
+      {
+        "name": "Bamboléo",
+        "length": "3:25"
+      },
+      {
+        "name": "Pida Me La",
+        "length": "3:18"
+      },
+      {
+        "name": "Bem, Bem, Maria",
+        "length": "3:06"
+      },
+      {
+        "name": "Volare",
+        "length": "3:41"
+      },
+      {
+        "name": "Moorea",
+        "length": "4:05"
+      },
+      {
+        "name": "A Mi Manera",
+        "length": "3:54"
+      },
+      {
+        "name": "Un Amor",
+        "length": "3:40"
+      },
+      {
+        "name": "Galaxia",
+        "length": "2:37"
+      },
+      {
+        "name": "Escucha Me",
+        "length": "4:39"
+      },
+      {
+        "name": "Tu Quieres Volver",
+        "length": "3:14"
+      },
+      {
+        "name": "Soy",
+        "length": "3:12"
+      },
+      {
+        "name": "La Quiero",
+        "length": "3:45"
+      },
+      {
+        "name": "Allegria",
+        "length": "2:50"
+      },
+      {
+        "name": "Vamos A Bailar",
+        "length": "4:56"
+      },
+      {
+        "name": "La Dona",
+        "length": "4:35"
+      },
+      {
+        "name": "Medley",
+        "length": "4:48"
+      }
     ]
   },
   "juan-luis-guerra-areito": {
     "artist": "Juan Luis Guerra",
     "title": "Areito",
     "songs": [
-      { "name": "Areíto", "length": "1:19" },
-      { "name": "El Costo de la Vida", "length": "4:10" },
-      { "name": "Señales de Humo", "length": "5:32" },
-      { "name": "Ayer", "length": "5:05" },
-      { "name": "Frío Frío", "length": "4:08" },
-      { "name": "Rompiendo Fuente", "length": "4:26" },
-      { "name": "Mal de Amor", "length": "3:46" },
-      { "name": "Si Saliera Petróleo", "length": "4:35" },
-      { "name": "Coronita de Flores", "length": "4:17" },
-      { "name": "Cuando Te Beso", "length": "3:28" },
-      { "name": "Cuando Te Beso", "length": "3:08" },
-      { "name": "Naboria/Daca Mayanimacaná", "length": "2:25" }
+      {
+        "name": "Areíto",
+        "length": "1:19"
+      },
+      {
+        "name": "El Costo de la Vida",
+        "length": "4:10"
+      },
+      {
+        "name": "Señales de Humo",
+        "length": "5:32"
+      },
+      {
+        "name": "Ayer",
+        "length": "5:05"
+      },
+      {
+        "name": "Frío Frío",
+        "length": "4:08"
+      },
+      {
+        "name": "Rompiendo Fuente",
+        "length": "4:26"
+      },
+      {
+        "name": "Mal de Amor",
+        "length": "3:46"
+      },
+      {
+        "name": "Si Saliera Petróleo",
+        "length": "4:35"
+      },
+      {
+        "name": "Coronita de Flores",
+        "length": "4:17"
+      },
+      {
+        "name": "Cuando Te Beso",
+        "length": "3:28"
+      },
+      {
+        "name": "Cuando Te Beso",
+        "length": "3:08"
+      },
+      {
+        "name": "Naboria/Daca Mayanimacaná",
+        "length": "2:25"
+      }
     ]
   },
   "queen-made-in-heaven": {
     "artist": "Queen",
     "title": "Made in Heaven",
     "songs": [
-      { "name": "It's a Beautiful Day", "length": "2:32" },
-      { "name": "Made in Heaven", "length": "5:25" },
-      { "name": "Let Me Live", "length": "4:45" },
-      { "name": "Mother Love", "length": "4:49" },
-      { "name": "My Life Has Been Saved", "length": "3:15" },
-      { "name": "I Was Born to Love You", "length": "4:49" },
-      { "name": "Heaven for Everyone", "length": "5:36" },
-      { "name": "Too Much Love Will Kill You", "length": "4:20" },
-      { "name": "You Don't Fool Me", "length": "5:24" },
-      { "name": "A Winter's Tale", "length": "3:49" },
-      { "name": "It's a Beautiful Day", "length": "3:01" },
-      { "name": "Yeah", "length": "0:04" },
-      { "name": "13", "length": "22:32" }
+      {
+        "name": "It's a Beautiful Day",
+        "length": "2:32"
+      },
+      {
+        "name": "Made in Heaven",
+        "length": "5:25"
+      },
+      {
+        "name": "Let Me Live",
+        "length": "4:45"
+      },
+      {
+        "name": "Mother Love",
+        "length": "4:49"
+      },
+      {
+        "name": "My Life Has Been Saved",
+        "length": "3:15"
+      },
+      {
+        "name": "I Was Born to Love You",
+        "length": "4:49"
+      },
+      {
+        "name": "Heaven for Everyone",
+        "length": "5:36"
+      },
+      {
+        "name": "Too Much Love Will Kill You",
+        "length": "4:20"
+      },
+      {
+        "name": "You Don't Fool Me",
+        "length": "5:24"
+      },
+      {
+        "name": "A Winter's Tale",
+        "length": "3:49"
+      },
+      {
+        "name": "It's a Beautiful Day",
+        "length": "3:01"
+      },
+      {
+        "name": "Yeah",
+        "length": "0:04"
+      },
+      {
+        "name": "13",
+        "length": "22:32"
+      }
     ]
   },
   "tame-impala-currents": {
     "artist": "Tame Impala",
     "title": "Currents",
     "songs": [
-      { "name": "Let It Happen", "length": "7:46" },
-      { "name": "Nangs", "length": "1:47" },
-      { "name": "The Moment", "length": "4:15" },
-      { "name": "Yes I'm Changing", "length": "4:30" },
-      { "name": "Eventually", "length": "5:19" },
-      { "name": "Gossip", "length": "0:55" },
-      { "name": "The Less I Know the Better", "length": "3:38" },
-      { "name": "Past Life", "length": "3:47" },
-      { "name": "Disciples", "length": "1:48" },
-      { "name": "'Cause I'm a Man", "length": "4:02" },
-      { "name": "Reality in Motion", "length": "4:12" },
-      { "name": "Love/Paranoia", "length": "3:10" },
-      { "name": "New Person Same Old Mistakes", "length": "6:03" }
+      {
+        "name": "Let It Happen",
+        "length": "7:46"
+      },
+      {
+        "name": "Nangs",
+        "length": "1:47"
+      },
+      {
+        "name": "The Moment",
+        "length": "4:15"
+      },
+      {
+        "name": "Yes I'm Changing",
+        "length": "4:30"
+      },
+      {
+        "name": "Eventually",
+        "length": "5:19"
+      },
+      {
+        "name": "Gossip",
+        "length": "0:55"
+      },
+      {
+        "name": "The Less I Know the Better",
+        "length": "3:38"
+      },
+      {
+        "name": "Past Life",
+        "length": "3:47"
+      },
+      {
+        "name": "Disciples",
+        "length": "1:48"
+      },
+      {
+        "name": "'Cause I'm a Man",
+        "length": "4:02"
+      },
+      {
+        "name": "Reality in Motion",
+        "length": "4:12"
+      },
+      {
+        "name": "Love/Paranoia",
+        "length": "3:10"
+      },
+      {
+        "name": "New Person Same Old Mistakes",
+        "length": "6:03"
+      }
     ]
   },
   "jimi-hendrix-electric-ladyland": {
     "artist": "Jimi Hendrix",
     "title": "Electric Ladyland",
     "songs": [
-      { "name": "And the Gods Made Love", "length": "1:19" },
-      { "name": "Have You Ever Been (To Electric Ladyland)", "length": "2:08" },
-      { "name": "Crosstown Traffic", "length": "2:25" },
-      { "name": "Voodoo Chile", "length": "14:50" },
-      { "name": "Little Miss Strange", "length": "2:47" },
-      { "name": "Long Hot Summer Night", "length": "3:21" },
-      { "name": "Come On (Part 1)", "length": "4:04" },
-      { "name": "Gypsy Eyes", "length": "3:38" },
-      { "name": "Burning of the Midnight Lamp", "length": "3:33" },
-      { "name": "Rainy Day, Dream Away", "length": "3:39" },
-      { "name": "1983... (A Merman I Should Turn to Be)", "length": "13:25" },
+      {
+        "name": "...And the Gods Made Love",
+        "length": "1:19"
+      },
+      {
+        "name": "Have You Ever Been (To Electric Ladyland)",
+        "length": "2:08"
+      },
+      {
+        "name": "Crosstown Traffic",
+        "length": "2:25"
+      },
+      {
+        "name": "Voodoo Chile",
+        "length": "14:50"
+      },
+      {
+        "name": "Little Miss Strange",
+        "length": "2:47"
+      },
+      {
+        "name": "Long Hot Summer Night",
+        "length": "3:21"
+      },
+      {
+        "name": "Come On (Part 1)",
+        "length": "4:04"
+      },
+      {
+        "name": "Gypsy Eyes",
+        "length": "3:38"
+      },
+      {
+        "name": "Burning of the Midnight Lamp",
+        "length": "3:33"
+      },
+      {
+        "name": "Rainy Day, Dream Away",
+        "length": "3:39"
+      },
+      {
+        "name": "1983... (A Merman I Should Turn to Be)",
+        "length": "13:25"
+      },
       {
         "name": "Moon, Turn the Tides....Gently Gently Away",
         "length": "0:58"
       },
-      { "name": "Still Raining, Still Dreaming", "length": "4:19" },
-      { "name": "House Burning Down", "length": "4:26" },
-      { "name": "All Along the Watchtower", "length": "3:54" },
-      { "name": "Voodoo Child (Slight Return)", "length": "5:06" }
+      {
+        "name": "Still Raining, Still Dreaming",
+        "length": "4:19"
+      },
+      {
+        "name": "House Burning Down",
+        "length": "4:26"
+      },
+      {
+        "name": "All Along the Watchtower",
+        "length": "3:54"
+      },
+      {
+        "name": "Voodoo Child (Slight Return)",
+        "length": "5:06"
+      }
     ]
   },
   "khruangbin-the-universe-smiles-upon-you": {
     "artist": "Khruangbin",
     "title": "The Universe Smiles Upon You",
     "songs": [
-      { "name": "Mr. White", "length": "04:58" },
-      { "name": "Two Fish and an Elephant", "length": "03:33" },
-      { "name": "Dern Kala", "length": "03:39" },
-      { "name": "Little Joe & Mary", "length": "05:08" },
-      { "name": "White Gloves", "length": "03:38" },
-      { "name": "People Everywhere (Still Alive)", "length": "02:39" },
-      { "name": "The Man Who Took My Sunglasses", "length": "02:13" },
-      { "name": "August Twelve", "length": "06:13" },
-      { "name": "Balls and Pins", "length": "03:28" },
-      { "name": "Zionsville", "length": "04:11" }
+      {
+        "name": "Mr. White",
+        "length": "04:58"
+      },
+      {
+        "name": "Two Fish and an Elephant",
+        "length": "03:33"
+      },
+      {
+        "name": "Dern Kala",
+        "length": "03:39"
+      },
+      {
+        "name": "Little Joe & Mary",
+        "length": "05:08"
+      },
+      {
+        "name": "White Gloves",
+        "length": "03:38"
+      },
+      {
+        "name": "People Everywhere (Still Alive)",
+        "length": "02:39"
+      },
+      {
+        "name": "The Man Who Took My Sunglasses",
+        "length": "02:13"
+      },
+      {
+        "name": "August Twelve",
+        "length": "06:13"
+      },
+      {
+        "name": "Balls and Pins",
+        "length": "03:28"
+      },
+      {
+        "name": "Zionsville",
+        "length": "04:11"
+      }
     ]
   },
   "gorki-vooruitgang": {
     "artist": "Gorki",
     "title": "Vooruitgang",
     "songs": [
-      { "name": "Tijdbom", "length": "4:31" },
-      { "name": "Vooruitgang", "length": "3:45" },
-      { "name": "Ik Doe Mee", "length": "3:30" },
-      { "name": "De Olifant Is Grijs", "length": "3:43" },
-      { "name": "Mijn Strijd Gaat Door", "length": "3:59" },
-      { "name": "Walhalla", "length": "3:16" },
-      { "name": "Ons Karakter Is Van Ijzer", "length": "3:18" },
-      { "name": "Het Voorspel Was Moordend", "length": "3:06" },
-      { "name": "Door Het Rookgordijn", "length": "3:51" },
-      { "name": "Zal Ik Het Ooit Begrijpen", "length": "5:04" }
+      {
+        "name": "Tijdbom",
+        "length": "4:31"
+      },
+      {
+        "name": "Vooruitgang",
+        "length": "3:45"
+      },
+      {
+        "name": "Ik Doe Mee",
+        "length": "3:30"
+      },
+      {
+        "name": "De Olifant Is Grijs",
+        "length": "3:43"
+      },
+      {
+        "name": "Mijn Strijd Gaat Door",
+        "length": "3:59"
+      },
+      {
+        "name": "Walhalla",
+        "length": "3:16"
+      },
+      {
+        "name": "Ons Karakter Is Van Ijzer",
+        "length": "3:18"
+      },
+      {
+        "name": "Het Voorspel Was Moordend",
+        "length": "3:06"
+      },
+      {
+        "name": "Door Het Rookgordijn",
+        "length": "3:51"
+      },
+      {
+        "name": "Zal Ik Het Ooit Begrijpen",
+        "length": "5:04"
+      }
     ]
   },
   "ice-cube-everythangs-corrupt": {
     "artist": "Ice Cube",
     "title": "Everythangs Corrupt",
     "songs": [
-      { "name": "Super OG", "length": "0:37" },
-      { "name": "Arrest the President", "length": "3:53" },
-      { "name": "Chase Down the Bully", "length": "4:06" },
-      { "name": "Don't Bring Me No Bag", "length": "3:37" },
-      { "name": "Bad Dope", "length": "3:22" },
-      { "name": "On Them Pills", "length": "3:58" },
-      { "name": "Fire Water", "length": "4:21" },
-      { "name": "Streets Shed Tears", "length": "4:01" },
-      { "name": "Ain't Got No Haters", "length": "3:26" },
-      { "name": "Can You Dig It?", "length": "4:22" },
-      { "name": "That New Funkadelic", "length": "3:54" },
-      { "name": "One for the Money", "length": "2:21" },
-      { "name": "Still in the Kitchen", "length": "3:25" },
-      { "name": "Non Believers", "length": "3:47" },
-      { "name": "Everythang's Corrupt", "length": "3:17" },
-      { "name": "Good Cop, Bad Cop", "length": "3:28" }
+      {
+        "name": "Super OG",
+        "length": "0:37"
+      },
+      {
+        "name": "Arrest the President",
+        "length": "3:53"
+      },
+      {
+        "name": "Chase Down the Bully",
+        "length": "4:06"
+      },
+      {
+        "name": "Don't Bring Me No Bag",
+        "length": "3:37"
+      },
+      {
+        "name": "Bad Dope",
+        "length": "3:22"
+      },
+      {
+        "name": "On Them Pills",
+        "length": "3:58"
+      },
+      {
+        "name": "Fire Water",
+        "length": "4:21"
+      },
+      {
+        "name": "Streets Shed Tears",
+        "length": "4:01"
+      },
+      {
+        "name": "Ain't Got No Haters",
+        "length": "3:26"
+      },
+      {
+        "name": "Can You Dig It?",
+        "length": "4:22"
+      },
+      {
+        "name": "That New Funkadelic",
+        "length": "3:54"
+      },
+      {
+        "name": "One for the Money",
+        "length": "2:21"
+      },
+      {
+        "name": "Still in the Kitchen",
+        "length": "3:25"
+      },
+      {
+        "name": "Non Believers",
+        "length": "3:47"
+      },
+      {
+        "name": "Everythang's Corrupt",
+        "length": "3:17"
+      },
+      {
+        "name": "Good Cop, Bad Cop",
+        "length": "3:28"
+      }
     ]
   },
   "pearl-jam-ten": {
     "artist": "Pearl Jam",
     "title": "Ten",
     "songs": [
-      { "name": "Once", "length": "3:51" },
-      { "name": "Even Flow", "length": "4:52" },
-      { "name": "Alive", "length": "5:40" },
-      { "name": "Why Go", "length": "3:19" },
-      { "name": "Black", "length": "5:48" },
-      { "name": "Jeremy", "length": "5:18" },
-      { "name": "Oceans", "length": "2:41" },
-      { "name": "Porch", "length": "3:30" },
-      { "name": "Garden", "length": "4:58" },
-      { "name": "Deep", "length": "4:18" },
-      { "name": "Release", "length": "6:30" }
+      {
+        "name": "Once",
+        "length": "3:51"
+      },
+      {
+        "name": "Even Flow",
+        "length": "4:52"
+      },
+      {
+        "name": "Alive",
+        "length": "5:40"
+      },
+      {
+        "name": "Why Go",
+        "length": "3:19"
+      },
+      {
+        "name": "Black",
+        "length": "5:48"
+      },
+      {
+        "name": "Jeremy",
+        "length": "5:18"
+      },
+      {
+        "name": "Oceans",
+        "length": "2:41"
+      },
+      {
+        "name": "Porch",
+        "length": "3:30"
+      },
+      {
+        "name": "Garden",
+        "length": "4:58"
+      },
+      {
+        "name": "Deep",
+        "length": "4:18"
+      },
+      {
+        "name": "Release",
+        "length": "6:30"
+      }
+    ]
+  },
+  "stuff-stuff": {
+    "artist": "Stuff",
+    "title": "Stuff",
+    "songs": [
+      {
+        "name": "Event Horizon",
+        "length": "3:51"
+      },
+      {
+        "name": "Skywalker",
+        "length": "4:52"
+      },
+      {
+        "name": "Tahtam",
+        "length": "5:40"
+      },
+      {
+        "name": "Sifa",
+        "length": "3:19"
+      },
+      {
+        "name": "Caves",
+        "length": "5:48"
+      },
+      {
+        "name": "Ahfreaq",
+        "length": "5:18"
+      },
+      {
+        "name": "Java",
+        "length": "2:41"
+      },
+      {
+        "name": "Walking Headz",
+        "length": "3:30"
+      },
+      {
+        "name": "R-over",
+        "length": "4:58"
+      }
     ]
   }
 }
