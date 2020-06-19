@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import { Image } from 'cloudinary-react'
-import Flex from '../components/Flex'
-import styled from 'styled-components'
-import Layout from '../components/Layout'
-import ReactCountryFlag from 'react-country-flag'
-import records from '../records.json';
+import React from "react"
+import { Link, graphql } from "gatsby"
+import { Image } from "cloudinary-react"
+import Flex from "../components/Flex"
+import styled from "styled-components"
+import Layout from "../components/Layout"
+import ReactCountryFlag from "react-country-flag"
+import records from "../records.json"
 
 const RecordImage = styled(Image)`
   display: block;
@@ -14,7 +14,7 @@ const PageHead = styled(Flex)`
   max-width: 1080px;
   padding: 24px;
   border-top: 2px solid black;
-  border-bottom: 2px solid black; 
+  border-bottom: 2px solid black;
   margin: 24px 0;
 `
 const TitleWrapper = styled(Flex)`
@@ -22,7 +22,6 @@ const TitleWrapper = styled(Flex)`
   h2 {
     font-size: 32px;
     margin-bottom: 8px;
-
   }
   h3 {
     font-size: 16px;
@@ -37,7 +36,6 @@ const RecordWrapper = styled(Flex)`
   @media screen and (max-width: 1080px) {
     flex-direction: column;
   }
-  
 `
 
 const RecordInfo = styled.div`
@@ -55,7 +53,6 @@ const ImageWrapper = styled.div`
   }
   @media screen and (max-width: 1080px) {
     width: 100%;
-
   }
 `
 const TagList = styled.ul`
@@ -65,20 +62,45 @@ const TagList = styled.ul`
 `
 const TrackList = styled.ol`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  margin-top: 24px;
   list-style: decimal !important;
+  font-size: 14px;
 `
 
 const StyledListItem = styled.li`
   display: flex;
   justify-content: space-between;
+  grid-column-start: ${props =>
+    props.songNumber <= Math.ceil(props.totalSongs / 2) ? 0 : 1};
+  grid-column-end: ${props =>
+    props.songNumber <= Math.ceil(props.totalSongs / 2) ? 1 : 2};
+  grid-row-start: ${props =>
+    props.songNumber <= Math.ceil(props.totalSongs / 2)
+      ? props.songNumber - 1
+      : props.songNumber - Math.ceil(props.totalSongs / 2) - 1};
+  grid-row-end: ${props =>
+    props.songNumber <= Math.ceil(props.totalSongs / 2)
+      ? props.songNumber
+      : props.songNumber - Math.ceil(props.totalSongs / 2)};
+
+  &.right {
+    margin-left: 16px;
+  }
 `
+
 const RecordPage = ({ data }) => {
-  const { title, price, artist, image, band_origin, country_code } = data.markdownRemark.frontmatter
-  const formattedArtist = artist.toLowerCase().split(' ').join('-');
-  const formattedAlbum = title.toLowerCase().split(' ').join('-');
-  const formattedKey = `${formattedArtist}-${formattedAlbum}`;
-  const songs = records[formattedKey].songs;
+  const {
+    title,
+    price,
+    artist,
+    image,
+    band_origin,
+    country_code,
+  } = data.markdownRemark.frontmatter
+  const formattedArtist = artist.toLowerCase().split(" ").join("-")
+  const formattedAlbum = title.toLowerCase().split(" ").join("-")
+  const formattedKey = `${formattedArtist}-${formattedAlbum}`
+  const songs = records[formattedKey].songs
 
   return (
     <Layout>
@@ -109,7 +131,16 @@ const RecordPage = ({ data }) => {
               aria-label={band_origin}
             />
           </Flex>
-          <p>Though a grunge record, Ten's musical style is influenced by classic rock and combines an "expansive harmonic vocabulary" with an anthemic sound.[1] While it deals with dark subject matter, it has generally been seen as a landmark of the early 1990s alternative rock sound, with Vedder's unusually deep and strong voice alternating between solidity and vibrato against the unrestrained, guitar-heavy, hard rock sound that drew influence from rock bands of the 1970s. </p>
+          <p>
+            Though a grunge record, Ten's musical style is influenced by classic
+            rock and combines an "expansive harmonic vocabulary" with an
+            anthemic sound.[1] While it deals with dark subject matter, it has
+            generally been seen as a landmark of the early 1990s alternative
+            rock sound, with Vedder's unusually deep and strong voice
+            alternating between solidity and vibrato against the unrestrained,
+            guitar-heavy, hard rock sound that drew influence from rock bands of
+            the 1970s.{" "}
+          </p>
           <TagList>
             <li>Example Tag</li>
             <li>Example Tag</li>
@@ -117,8 +148,21 @@ const RecordPage = ({ data }) => {
           </TagList>
           <TrackList>
             {songs.map((song, i) => {
+              const position =
+                i + 1 <= Math.ceil(songs.length / 2) ? "left" : "right"
+
               return (
-                <StyledListItem key={song.name}><span>{i + 1}. {song.name}</span><span>{song.length}</span></StyledListItem>
+                <StyledListItem
+                  className={position}
+                  songNumber={i + 1}
+                  totalSongs={songs.length}
+                  key={song.name}
+                >
+                  <span>
+                    {i + 1}. {song.name}
+                  </span>
+                  <span>{song.length}</span>
+                </StyledListItem>
               )
             })}
           </TrackList>
