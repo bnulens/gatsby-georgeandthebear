@@ -1,5 +1,5 @@
-[
-  {
+{
+  "red-hot-chili-peppers-californication": {
     "artist": "Red Hot Chili Peppers",
     "title": "Californication",
     "songs": [
@@ -20,7 +20,7 @@
       { "name": "Road Trippin'", "length": "3:25" }
     ]
   },
-  {
+  "dr-dre-2001": {
     "artist": "Dr Dre",
     "title": "2001",
     "songs": [
@@ -48,35 +48,7 @@
       { "name": "The Message", "length": "5:29" }
     ]
   },
-  {
-    "artist": "Dr Dre",
-    "title": "2001",
-    "songs": [
-      { "name": "Lolo (Intro)", "length": "0:40" },
-      { "name": "The Watcher", "length": "3:28" },
-      { "name": "Fuck You", "length": "3:25" },
-      { "name": "Still D.R.E.", "length": "4:28" },
-      { "name": "Big Ego's", "length": "4:01" },
-      { "name": "Xxplosive", "length": "3:35" },
-      { "name": "What's the Difference", "length": "4:04" },
-      { "name": "Bar One", "length": "0:51" },
-      { "name": "Light Speed", "length": "2:41" },
-      { "name": "Forgot About Dre", "length": "3:42" },
-      { "name": "The Next Episode", "length": "2:42" },
-      { "name": "Let's Get High", "length": "2:27" },
-      { "name": "Bitch Niggaz", "length": "4:14" },
-      { "name": "The Car Bomb", "length": "1:01" },
-      { "name": "Murder Ink", "length": "2:28" },
-      { "name": "Ed-ucation", "length": "1:32" },
-      { "name": "Some L.A. Niggaz", "length": "4:25" },
-      { "name": "Pause 4 Porno", "length": "1:33" },
-      { "name": "Housewife", "length": "4:03" },
-      { "name": "Ackrite", "length": "3:40" },
-      { "name": "Bang Bang", "length": "3:42" },
-      { "name": "The Message", "length": "5:29" }
-    ]
-  },
-  {
+  "pink-floyd-dark-side-of-the-moon": {
     "artist": "Pink Floyd",
     "title": "Dark Side of the Moon",
     "songs": [
@@ -92,7 +64,7 @@
       { "name": "Eclipse", "length": "2:03" }
     ]
   },
-  {
+  "gipsy-kings-volare": {
     "artist": "Gipsy Kings",
     "title": "Volare",
     "songs": [
@@ -116,7 +88,7 @@
       { "name": "Medley", "length": "4:48" }
     ]
   },
-  {
+  "juan-luis-guerra-areito": {
     "artist": "Juan Luis Guerra",
     "title": "Areito",
     "songs": [
@@ -134,7 +106,7 @@
       { "name": "Naboria/Daca Mayanimacaná", "length": "2:25" }
     ]
   },
-  {
+  "queen-made-in-heaven": {
     "artist": "Queen",
     "title": "Made in Heaven",
     "songs": [
@@ -153,7 +125,7 @@
       { "name": "13", "length": "22:32" }
     ]
   },
-  {
+  "tame-impala-currents": {
     "artist": "Tame Impala",
     "title": "Currents",
     "songs": [
@@ -172,7 +144,7 @@
       { "name": "New Person Same Old Mistakes", "length": "6:03" }
     ]
   },
-  {
+  "jimi-hendrix-electric-ladyland": {
     "artist": "Jimi Hendrix",
     "title": "Electric Ladyland",
     "songs": [
@@ -197,7 +169,7 @@
       { "name": "Voodoo Child (Slight Return)", "length": "5:06" }
     ]
   },
-  {
+  "khruangbin-the-universe-smiles-upon-you": {
     "artist": "Khruangbin",
     "title": "The Universe Smiles Upon You",
     "songs": [
@@ -213,7 +185,7 @@
       { "name": "Zionsville", "length": "04:11" }
     ]
   },
-  {
+  "gorki-vooruitgang": {
     "artist": "Gorki",
     "title": "Vooruitgang",
     "songs": [
@@ -229,7 +201,7 @@
       { "name": "Zal Ik Het Ooit Begrijpen", "length": "5:04" }
     ]
   },
-  {
+  "ice-cube-everythangs-corrupt": {
     "artist": "Ice Cube",
     "title": "Everythangs Corrupt",
     "songs": [
@@ -251,9 +223,9 @@
       { "name": "Good Cop, Bad Cop", "length": "3:28" }
     ]
   },
-  {
+  "pearl-jam-ten": {
     "artist": "Pearl Jam",
-    "title": "2001",
+    "title": "Ten",
     "songs": [
       { "name": "Once", "length": "3:51" },
       { "name": "Even Flow", "length": "4:52" },
@@ -268,4 +240,4 @@
       { "name": "Release", "length": "6:30" }
     ]
   }
-]
+}
