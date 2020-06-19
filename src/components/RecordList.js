@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Record from "./Record.js"
 
 const Grid = styled.div`
-  margin-top: 30px;
+  margin: 24px 0px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px 10px;

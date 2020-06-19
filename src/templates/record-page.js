@@ -32,13 +32,31 @@ const ArtistLink = styled(Link)`
   color: red;
 `
 const RecordWrapper = styled(Flex)`
-  flex: 0 0 50%;
+  margin-bottom: 24px;
+  @media screen and (max-width: 1080px) {
+    flex-direction: column;
+  }
+  
 `
 
 const RecordInfo = styled.div`
-
+  width: 50%;
+  border-bottom: 1px solid black;
+  @media screen and (max-width: 1080px) {
+    width: 100%;
+  }
 `
+const ImageWrapper = styled.div`
+  width: 50%;
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 1080px) {
+    width: 100%;
 
+  }
+`
 const TagList = styled.ul`
   display: flex;
   justify-content: space-around;
@@ -59,13 +77,15 @@ const RecordPage = ({ data }) => {
         <Link to="/">Go To &gt;</Link>
       </PageHead>
       <RecordWrapper justifyContent="space-between" alignItems="flex-start">
-        <RecordImage
-          cloudName="bnulens"
-          publicId={image}
-          secure="true"
-          height="450"
-          width="450"
-        />
+        <ImageWrapper>
+          <RecordImage
+            cloudName="bnulens"
+            publicId={image}
+            secure="true"
+            height="500"
+            width="500"
+          />
+        </ImageWrapper>
         <RecordInfo>
           <Flex justifyContent="space-between" alignItems="center">
             <div>{price}</div>
