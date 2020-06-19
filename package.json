@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "cloudinary-react": "^1.5.0",
+    "disconnect": "^1.2.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.22.18",
     "gatsby-background-image": "^1.1.1",

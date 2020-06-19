@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import FrontImage from "gatsby-background-image"
 import Img from "gatsby-image"
+import disconnect from "disconnect"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -243,7 +244,7 @@ const TalentOverlay = styled.section`
     top: 0;
     right: 0;
     padding: 32px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.6);
   }
 `
 const TalentContent = styled.div`
@@ -254,6 +255,17 @@ const TalentContent = styled.div`
 `
 
 const IndexPage = props => {
+  // const init = () => {
+  //   const Discogs = disconnect.Client
+  //   var db = new Discogs().database();
+  //   db.getRelease(176126, function (err, data) {
+  //     console.log(data);
+  //   });
+  //   console.log(db)
+  // }
+
+  // init()
+
   const [talentImage, heroImage, catchImage] = props.data.allFile.edges
   return (
     <Layout hasHero>

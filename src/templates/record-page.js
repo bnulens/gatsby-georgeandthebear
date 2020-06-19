@@ -20,7 +20,8 @@ const TitleWrapper = styled(Flex)`
   padding: 0;
   h2 {
     font-size: 32px;
-    margin-bottom: 0;
+    margin-bottom: 8px;
+
   }
   h3 {
     font-size: 16px;
@@ -38,7 +39,7 @@ const RecordPage = ({ data }) => {
     <Layout>
       <PageHead justifyContent="space-between" alignItems="center">
         <Link to="/shop">&lt; Ga terug</Link>
-        <TitleWrapper flexDirection="column" alignItems="right">
+        <TitleWrapper flexDirection="column" alignItems="center">
           <h2>{title}</h2>
           <ArtistLink to="/">{artist}</ArtistLink>
         </TitleWrapper>
