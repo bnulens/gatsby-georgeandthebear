@@ -10,9 +10,9 @@ import RecordList from "../components/RecordList"
 
 const PageHead = styled(Flex)`
   max-width: 1080px;
-  padding: 32px;
+  padding: 24px;
   border-top: 2px solid black;
-  border-bottom: 2px solid black; 
+  border-bottom: 2px solid black;
 `
 
 const Shop = () => (

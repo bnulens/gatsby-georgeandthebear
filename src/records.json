@@ -48,7 +48,7 @@
       { "name": "The Message", "length": "5:29" }
     ]
   },
-  "pink-floyd-dark-side-of-the-moon": {
+  "pink-floyd-darkside-of-the-moon": {
     "artist": "Pink Floyd",
     "title": "Dark Side of the Moon",
     "songs": [
@@ -148,7 +148,7 @@
     "artist": "Jimi Hendrix",
     "title": "Electric Ladyland",
     "songs": [
-      { "name": "...And the Gods Made Love", "length": "1:19" },
+      { "name": "And the Gods Made Love", "length": "1:19" },
       { "name": "Have You Ever Been (To Electric Ladyland)", "length": "2:08" },
       { "name": "Crosstown Traffic", "length": "2:25" },
       { "name": "Voodoo Chile", "length": "14:50" },

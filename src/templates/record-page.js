@@ -13,9 +13,9 @@ const RecordImage = styled(Image)`
 const PageHead = styled(Flex)`
   max-width: 1080px;
   padding: 24px;
+  margin-bottom: 24px;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  margin: 24px 0;
 `
 const TitleWrapper = styled(Flex)`
   padding: 0;
@@ -38,13 +38,6 @@ const RecordWrapper = styled(Flex)`
   }
 `
 
-const RecordInfo = styled.div`
-  width: 50%;
-  border-bottom: 1px solid black;
-  @media screen and (max-width: 1080px) {
-    width: 100%;
-  }
-`
 const ImageWrapper = styled.div`
   width: 50%;
   img {
@@ -55,11 +48,46 @@ const ImageWrapper = styled.div`
     width: 100%;
   }
 `
+
+const RecordInfo = styled(Flex)`
+  width: 50%;
+  border-bottom: 1px solid black;
+
+  @media screen and (max-width: 1080px) {
+    width: 100%;
+    padding: 0 32px;
+    margin-top: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 8px 0;
+    margin-bottom: 16px;
+    text-align: justify;
+  }
+`
+
+const PriceCountryInfo = styled(Flex)`
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: bold;
+
+  span.emojiFlag {
+    font-size: 2em !important;
+  }
+`
+
 const TagList = styled.ul`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  li {
+    font-size: 16px;
+    font-weight: bold;
+  }
 `
+
 const TrackList = styled.ol`
   display: grid;
   margin-top: 24px;
@@ -82,6 +110,12 @@ const StyledListItem = styled.li`
     props.songNumber <= Math.ceil(props.totalSongs / 2)
       ? props.songNumber
       : props.songNumber - Math.ceil(props.totalSongs / 2)};
+  span:first-child {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   &.right {
     margin-left: 16px;
@@ -112,7 +146,7 @@ const RecordPage = ({ data }) => {
         </TitleWrapper>
         <Link to="/">Go To &gt;</Link>
       </PageHead>
-      <RecordWrapper justifyContent="space-between" alignItems="flex-start">
+      <RecordWrapper justifyContent="space-between" alignItems="stretch">
         <ImageWrapper>
           <RecordImage
             cloudName="bnulens"
@@ -122,24 +156,19 @@ const RecordPage = ({ data }) => {
             width="500"
           />
         </ImageWrapper>
-        <RecordInfo>
-          <Flex justifyContent="space-between" alignItems="center">
-            <div>{price}</div>
+        <RecordInfo flexDirection="column" justifyContent="space-between">
+          <PriceCountryInfo justifyContent="space-between" alignItems="center">
+            <div>&euro; {price}</div>
             <ReactCountryFlag
               className="emojiFlag"
               countryCode={country_code}
               aria-label={band_origin}
             />
-          </Flex>
+          </PriceCountryInfo>
           <p>
             Though a grunge record, Ten's musical style is influenced by classic
             rock and combines an "expansive harmonic vocabulary" with an
-            anthemic sound.[1] While it deals with dark subject matter, it has
-            generally been seen as a landmark of the early 1990s alternative
-            rock sound, with Vedder's unusually deep and strong voice
-            alternating between solidity and vibrato against the unrestrained,
-            guitar-heavy, hard rock sound that drew influence from rock bands of
-            the 1970s.{" "}
+            anthemic sound. While it deals with dark subject matter
           </p>
           <TagList>
             <li>Example Tag</li>
