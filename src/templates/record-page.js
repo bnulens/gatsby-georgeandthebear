@@ -5,6 +5,7 @@ import Flex from '../components/Flex'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 import ReactCountryFlag from 'react-country-flag'
+import records from '../records.json';
 
 const RecordImage = styled(Image)`
   display: block;
@@ -62,11 +63,24 @@ const TagList = styled.ul`
   justify-content: space-around;
   align-items: center;
 `
+const TrackList = styled.ol`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: decimal !important;
+`
 
+const StyledListItem = styled.li`
+  display: flex;
+  justify-content: space-between;
+`
 const RecordPage = ({ data }) => {
   const { title, price, artist, image, band_origin, country_code } = data.markdownRemark.frontmatter
-  return (
+  const formattedArtist = artist.toLowerCase().split(' ').join('-');
+  const formattedAlbum = title.toLowerCase().split(' ').join('-');
+  const formattedKey = `${formattedArtist}-${formattedAlbum}`;
+  const songs = records[formattedKey].songs;
 
+  return (
     <Layout>
       <PageHead justifyContent="space-between" alignItems="center">
         <Link to="/shop">&lt; Ga terug</Link>
@@ -101,6 +115,13 @@ const RecordPage = ({ data }) => {
             <li>Example Tag</li>
             <li>Example Tag</li>
           </TagList>
+          <TrackList>
+            {songs.map((song, i) => {
+              return (
+                <StyledListItem key={song.name}><span>{i + 1}. {song.name}</span><span>{song.length}</span></StyledListItem>
+              )
+            })}
+          </TrackList>
         </RecordInfo>
       </RecordWrapper>
     </Layout>
