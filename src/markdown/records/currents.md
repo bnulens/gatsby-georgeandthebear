@@ -1,7 +1,7 @@
 ---
 title: 'Currents'
 genre: 'Rock'
-artist: 'Tame Impala '
+artist: 'Tame Impala'
 price: 29.99
 label: 'Y'
 image: 'record-images/tame-impala-currents.jpg'
