@@ -81,8 +81,8 @@ function listMajors(auth) {
     const rows = res.data.values;
     if (rows.length) {
       rows.map((row) => {
-        const fileName = row[0].toLowerCase().split(' ').join('-');
-        const content = `---\ntitle: '${row[0]}'\ngenre: '${row[1]}'\nartist: '${row[2]}'\nprice: ${row[3]}\nlabel: '${row[4]}'\nimage: 'record-images/${row[5]}.jpg'\nband-origin: '${row[6]}'\ncountry-code: '${row[7]}'\ntype: 'record'\n---`
+        const fileName = row[0].trim().toLowerCase().split(' ').join('-');
+        const content = `---\ntitle: '${row[0]}'\ngenre: '${row[1]}'\nartist: '${row[2].trim()}'\nprice: ${row[3]}\nlabel: '${row[4]}'\nimage: 'record-images/${row[5]}.jpg'\nband-origin: '${row[6]}'\ncountry-code: '${row[7]}'\ntype: 'record'\n---`
         fs.writeFileSync(`../src/markdown/records/${fileName}.md`, content)
       });
     } else {
