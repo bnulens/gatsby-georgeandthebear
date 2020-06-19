@@ -31,6 +31,19 @@ const TitleWrapper = styled(Flex)`
 const ArtistLink = styled(Link)`
   color: red;
 `
+const RecordWrapper = styled(Flex)`
+  flex: 0 0 50%;
+`
+
+const RecordInfo = styled.div`
+
+`
+
+const TagList = styled.ul`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
 
 const RecordPage = ({ data }) => {
   const { title, price, artist, image, band_origin, country_code } = data.markdownRemark.frontmatter
@@ -45,17 +58,31 @@ const RecordPage = ({ data }) => {
         </TitleWrapper>
         <Link to="/">Go To &gt;</Link>
       </PageHead>
-      <RecordImage
-        cloudName="bnulens"
-        publicId={image}
-        secure="true"
-      />
-      <div>{price}</div>
-      <ReactCountryFlag
-        className="emojiFlag"
-        countryCode={country_code}
-        aria-label={band_origin}
-      />
+      <RecordWrapper justifyContent="space-between" alignItems="flex-start">
+        <RecordImage
+          cloudName="bnulens"
+          publicId={image}
+          secure="true"
+          height="450"
+          width="450"
+        />
+        <RecordInfo>
+          <Flex justifyContent="space-between" alignItems="center">
+            <div>{price}</div>
+            <ReactCountryFlag
+              className="emojiFlag"
+              countryCode={country_code}
+              aria-label={band_origin}
+            />
+          </Flex>
+          <p>Though a grunge record, Ten's musical style is influenced by classic rock and combines an "expansive harmonic vocabulary" with an anthemic sound.[1] While it deals with dark subject matter, it has generally been seen as a landmark of the early 1990s alternative rock sound, with Vedder's unusually deep and strong voice alternating between solidity and vibrato against the unrestrained, guitar-heavy, hard rock sound that drew influence from rock bands of the 1970s. </p>
+          <TagList>
+            <li>Example Tag</li>
+            <li>Example Tag</li>
+            <li>Example Tag</li>
+          </TagList>
+        </RecordInfo>
+      </RecordWrapper>
     </Layout>
   )
 }
