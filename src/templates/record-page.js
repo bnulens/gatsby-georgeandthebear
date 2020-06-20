@@ -90,6 +90,7 @@ const TagList = styled.ul`
 
 const TrackList = styled.ol`
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 24px;
   list-style: decimal !important;
   font-size: 14px;
@@ -99,17 +100,17 @@ const StyledListItem = styled.li`
   display: flex;
   justify-content: space-between;
   grid-column-start: ${props =>
-    props.songNumber <= Math.ceil(props.totalSongs / 2) ? 0 : 1};
-  grid-column-end: ${props =>
     props.songNumber <= Math.ceil(props.totalSongs / 2) ? 1 : 2};
+  grid-column-end: ${props =>
+    props.songNumber <= Math.ceil(props.totalSongs / 2) ? 2 : 3};
   grid-row-start: ${props =>
-    props.songNumber <= Math.ceil(props.totalSongs / 2)
-      ? props.songNumber - 1
-      : props.songNumber - Math.ceil(props.totalSongs / 2) - 1};
-  grid-row-end: ${props =>
     props.songNumber <= Math.ceil(props.totalSongs / 2)
       ? props.songNumber
       : props.songNumber - Math.ceil(props.totalSongs / 2)};
+  grid-row-end: ${props =>
+    props.songNumber <= Math.ceil(props.totalSongs / 2)
+      ? props.songNumber + 1
+      : props.songNumber - Math.ceil(props.totalSongs / 2) + 1};
   span:first-child {
     max-width: 200px;
     white-space: nowrap;
