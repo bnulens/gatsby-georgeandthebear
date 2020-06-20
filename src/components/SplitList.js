@@ -5,17 +5,17 @@ const StyledListItem = styled.li`
   display: flex;
   justify-content: space-between;
   grid-column-start: ${props =>
-    props.songNumber <= Math.ceil(props.totalSongs / 2) ? 1 : 2};
+    props.itemNumber <= Math.ceil(props.totalItems / 2) ? 1 : 2};
   grid-column-end: ${props =>
-    props.songNumber <= Math.ceil(props.totalSongs / 2) ? 2 : 3};
+    props.itemNumber <= Math.ceil(props.totalItems / 2) ? 2 : 3};
   grid-row-start: ${props =>
-    props.songNumber <= Math.ceil(props.totalSongs / 2)
-      ? props.songNumber
-      : props.songNumber - Math.ceil(props.totalSongs / 2)};
+    props.itemNumber <= Math.ceil(props.totalItems / 2)
+      ? props.itemNumber
+      : props.itemNumber - Math.ceil(props.totalItems / 2)};
   grid-row-end: ${props =>
-    props.songNumber <= Math.ceil(props.totalSongs / 2)
-      ? props.songNumber + 1
-      : props.songNumber - Math.ceil(props.totalSongs / 2) + 1};
+    props.itemNumber <= Math.ceil(props.totalItems / 2)
+      ? props.itemNumber + 1
+      : props.itemNumber - Math.ceil(props.totalItems / 2) + 1};
   span:first-child {
     max-width: 200px;
     white-space: nowrap;
@@ -43,8 +43,8 @@ const SplitList = ({ list }) => {
         return (
           <StyledListItem
             className={position}
-            songNumber={i + 1}
-            totalSongs={list.length}
+            itemNumber={i + 1}
+            totalItems={list.length}
             key={item.name}
           >
             <span>
