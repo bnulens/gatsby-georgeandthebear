@@ -1,10 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { Image } from "cloudinary-react"
-import Flex from "../components/Flex"
 import styled from "styled-components"
-import Layout from "../components/Layout"
 import ReactCountryFlag from "react-country-flag"
+
+import Flex from "../components/Flex"
+import Layout from "../components/Layout"
+import SplitList from "../components/SplitList"
 import records from "../records.json"
 
 const RecordImage = styled(Image)`
@@ -88,41 +90,6 @@ const TagList = styled.ul`
   }
 `
 
-const TrackList = styled.ol`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 24px;
-  list-style: decimal !important;
-  font-size: 14px;
-`
-
-const StyledListItem = styled.li`
-  display: flex;
-  justify-content: space-between;
-  grid-column-start: ${props =>
-    props.songNumber <= Math.ceil(props.totalSongs / 2) ? 1 : 2};
-  grid-column-end: ${props =>
-    props.songNumber <= Math.ceil(props.totalSongs / 2) ? 2 : 3};
-  grid-row-start: ${props =>
-    props.songNumber <= Math.ceil(props.totalSongs / 2)
-      ? props.songNumber
-      : props.songNumber - Math.ceil(props.totalSongs / 2)};
-  grid-row-end: ${props =>
-    props.songNumber <= Math.ceil(props.totalSongs / 2)
-      ? props.songNumber + 1
-      : props.songNumber - Math.ceil(props.totalSongs / 2) + 1};
-  span:first-child {
-    max-width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  &.right {
-    margin-left: 16px;
-  }
-`
-
 const RecordPage = ({ data }) => {
   const {
     title,
@@ -176,26 +143,7 @@ const RecordPage = ({ data }) => {
             <li>Example Tag</li>
             <li>Example Tag</li>
           </TagList>
-          <TrackList>
-            {songs.map((song, i) => {
-              const position =
-                i + 1 <= Math.ceil(songs.length / 2) ? "left" : "right"
-
-              return (
-                <StyledListItem
-                  className={position}
-                  songNumber={i + 1}
-                  totalSongs={songs.length}
-                  key={song.name}
-                >
-                  <span>
-                    {i + 1}. {song.name}
-                  </span>
-                  <span>{song.length}</span>
-                </StyledListItem>
-              )
-            })}
-          </TrackList>
+          <SplitList list={songs} />
         </RecordInfo>
       </RecordWrapper>
     </Layout>
